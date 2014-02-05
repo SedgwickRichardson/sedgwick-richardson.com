@@ -1,0 +1,357 @@
+<?php
+
+// hide useless stuff in front page
+function sr_front_page() {
+  return '';
+}
+
+function sr_menu() {
+  $items['front'] = array(
+      'page callback' => 'sr_front_page',
+      'access callback' => true
+  );
+  $items['why-sr/thought-leadership'] = array(
+      'title' => 'Thought Leadership',
+      'page callback' => 'sr_thoughtleadership',
+      'access callback' => true
+  );
+  $items['why-sr'] = array(
+      'page callback' => 'redirect_to_aboutus',
+      'access callback' => true
+  );
+  $items['news'] = array(
+      'title' => 'News',
+      'page callback' => 'sr_news',
+      'access callback' => true
+  );
+
+  return $items;
+}
+
+function sr_thoughtleadership($arg1 = null, $arg2 = null) {
+  $view = views_get_view('thought_leadership');
+  if (!$arg2) {
+    $view->set_display('all_content');
+  } elseif ($arg1 == 'archives' && $arg2) {
+    $view->set_display('archives_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 == 'categories' && $arg2) {
+    $view->set_display('categories_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 == 'tags' && $arg2) {
+    $view->set_display('tags_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 && $arg2 == null) {
+    $view->set_display('tags_content');
+    $view->set_arguments(array($arg2));
+  }
+  $view->pre_execute();
+  $view->execute();
+
+  return $view->render();
+}
+
+function sr_news($arg1 = null, $arg2 = null) {
+  $view = views_get_view('news');
+
+  if (!$arg2) {
+    $view->set_display('all_content');
+  } elseif ($arg1 == 'archives' && $arg2) {
+    $view->set_display('archives_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 == 'categories' && $arg2) {
+    $view->set_display('categories_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 == 'tags' && $arg2) {
+    $view->set_display('tags_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 && $arg2 == null) {
+    $view->set_display('tags_content');
+    $view->set_arguments(array($arg2));
+  }
+  $view->pre_execute();
+  $view->execute();
+
+  return $view->render();
+}
+
+function sr_block_info() {
+  $blocks['thought_leadership_archives'] = array(
+      'info' => t('Thought Leadship Archives Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['thought_leadership_categories'] = array(
+      'info' => t('Thought Leadship Categories Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['thought_leadership_tags'] = array(
+      'info' => t('Thought Leadship Tags Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['news_archives'] = array(
+      'info' => t('News Archives Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['news_categories'] = array(
+      'info' => t('News Categories Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['news_tags'] = array(
+      'info' => t('News Tags Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['ourwork_options'] = array(
+      'info' => t('Our-works Options'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['clients_options'] = array(
+      'info' => t('Clients Options'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+function sr_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    /*
+     * thought leadership
+     */
+    case "thought_leadership_archives":
+      $sql = "select distinct FROM_UNIXTIME(n.created, '%Y%m') as createdate from node as n where n.type=:type order by created desc";
+      $result = db_query($sql, array(':type' => 'thought_leadership'));
+      $html = '<div class="accordion selected"><a href="#">Archives</a><ul>';
+      foreach ($result as $result_val) {
+        $y = substr($result_val->createdate, 0, 4);
+        $month = substr($result_val->createdate, 4);
+        $m = '';
+        switch ($month) {
+          case '01': $m = 'Jan';
+            break;
+          case '02': $m = 'Feb';
+            break;
+          case '03': $m = 'Mar';
+            break;
+          case '04': $m = 'Apr';
+            break;
+          case '05': $m = 'May';
+            break;
+          case '06': $m = 'Jun';
+            break;
+          case '07': $m = 'Jul';
+            break;
+          case '08': $m = 'Aug';
+            break;
+          case '09': $m = 'Sep';
+            break;
+          case '10': $m = 'Oct';
+            break;
+          case '11': $m = 'Nov';
+            break;
+          case '12': $m = 'Dec';
+            break;
+        }
+        $html .= "<li><a href='/why-sr/thought-leadership/archives/$result_val->createdate'>$m $y</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "thought_leadership_categories":
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->machine_name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['thought_leadership_categories']);
+      $html = '<div class="accordion selected"><a href="#">Categories</a><ul>';
+      foreach ($children as $v) {
+        $html .= "<li><a href='/why-sr/thought-leadership/categories/$v->name'>$v->name</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "thought_leadership_tags":
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->machine_name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['thought_leadership_tags']);
+      $html = '<div class="accordion"><a href="#">Tags</a><ul>';
+      foreach ($children as $v) {
+        $html .= "<li><a href='/why-sr/thought-leadership/tags/$v->name'>$v->name</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    /*
+     * news
+     */
+    case "news_archives":
+      $sql = "select distinct FROM_UNIXTIME(n.created, '%Y%m') as createdate from node as n where n.type=:type order by created desc";
+      $result = db_query($sql, array(':type' => 'news'));
+      $html = '<div class="accordion selected"><a href="#">Archives</a><ul>';
+      foreach ($result as $result_val) {
+        $y = substr($result_val->createdate, 0, 4);
+        $month = substr($result_val->createdate, 4);
+        $m = '';
+        switch ($month) {
+          case '01': $m = 'Jan';
+            break;
+          case '02': $m = 'Feb';
+            break;
+          case '03': $m = 'Mar';
+            break;
+          case '04': $m = 'Apr';
+            break;
+          case '05': $m = 'May';
+            break;
+          case '06': $m = 'Jun';
+            break;
+          case '07': $m = 'Jul';
+            break;
+          case '08': $m = 'Aug';
+            break;
+          case '09': $m = 'Sep';
+            break;
+          case '10': $m = 'Oct';
+            break;
+          case '11': $m = 'Nov';
+            break;
+          case '12': $m = 'Dec';
+            break;
+        }
+        $html .= "<li><a href='/news/archives/$result_val->createdate'>$m $y</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "news_categories":
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->machine_name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['news_categories']);
+      $html = '<div class="accordion selected"><a href="#">Categories</a><ul>';
+      foreach ($children as $v) {
+        $html .= "<li><a href='/news/categories/$v->name'>$v->name</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "news_tags":
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->machine_name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['news_tags']);
+      $html = '<div class="accordion"><a href="#">Tags</a><ul>';
+      foreach ($children as $v) {
+        $html .= "<li><a href='/news/tags/$v->name'>$v->name</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+
+    /*
+     * our-work
+     */
+    case "ourwork_options":
+      // grab the expertise taxonomy
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['expertise']);
+
+      // create container HTML
+      $html = "<div class='isotope-options'>
+       <ul class='isotope-filters option-set clearfix new-nav'>";
+
+      // create expertise filter/tab HTML
+      $html_expertise = "<div id='expertise'>";
+      foreach ($children as $key => $value) {
+        if ($value->depth == 0) {
+          $html_expertise .= "<a href='#' data-tab='" . preg_replace('/\s+/', '', strtolower($value->name)) . "'>" . $value->name . "</a>";
+        }
+      }
+      $html_expertise .= "</div>";
+
+      // create deliverable HTML
+      $html_deliverable = "<div id='deliverable'>";
+      $count = 0;
+      $groups = array();
+      $item_html = "";
+      foreach ($children as $key => $value) {
+        $item_name = $value->name;
+        $item_mname = preg_replace('/\W+/', '', strtolower($item_name));
+        // 1st lv
+        if ($value->depth == 0) {
+          // parent, is the first item of this group
+          if ($count != 0) {
+            // not 1st time, close previous group div tag
+            $item_html .= "</div>";
+          }
+
+          $count++;
+          $item_html .= "<div class='group-$count'>
+        <a href='#filter=.$item_mname' class='filterbutton'>View All</a>";
+        } else {
+          $item_html .= "<span> / </span>
+        <a href='#filter=.$item_mname' class='filterbutton'>$item_name</a>";
+        }
+      }
+      $html_deliverable .= $item_html . "</div>";
+
+      $html .= $html_expertise . $html_deliverable . "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "clients_options":
+      // grab the clients taxonomy
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['clients']);
+
+      $html = "<div class='isotope-options'>
+        <div id='clients'>
+          <h3>Clients</h3>
+          <ul id='filter' class='isotope-filters option-set clearfix new-nav'>
+          <li>
+          <a href='#filter=.all' class='filterbutton'>View All</a>
+          </li>";
+      $count = 0;
+      $groups = array();
+      $item_html = "";
+      foreach ($children as $key => $value) {
+        $item_name = $value->name;
+        $item_mname = preg_replace('/\W+/', '', strtolower($item_name));
+        $item_html .= "<span> / </span>
+        <li><a href='#filter=.$item_mname' class='filterbutton'>$item_name</a></li>";
+      }
+      $html .= $item_html . "</ul>
+        <div id='relayout'>
+          <a id='tileview' href='#'>Tile View</a>
+          <span> / </span>
+          <a id='listview' href='#'>List View</a>
+        </div>
+      </div>";
+      $block['content'] = $html;
+      break;
+  }
+
+  return $block;
+}

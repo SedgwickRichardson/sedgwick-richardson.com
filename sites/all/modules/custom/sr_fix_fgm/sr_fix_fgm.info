@@ -1,0 +1,3 @@
+name=sr_fix_fgm
+core=7.x
+description=fix field group multiple delta

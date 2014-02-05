@@ -1,0 +1,27 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Sans+Narrow:400,700|PT+Serif:400,400italic,700,700italic);
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_live\/sites\/all\/themes\/sr\/sass\/wysisyg\.scss}line{font-family:\000038}}
+.tl-para {
+  font: noraml 16px/25px "PT Sans", sans-serif;
+  color: #3c3c3c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_live\/sites\/all\/themes\/sr\/sass\/wysisyg\.scss}line{font-family:\0000312}}
+.tl-desc {
+  font: italic 18px/30px "PT Serif", serif;
+  padding-bottom: 32px;
+  color: #3c3c3c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_live\/sites\/all\/themes\/sr\/sass\/wysisyg\.scss}line{font-family:\0000317}}
+.tl-heading {
+  font: bold 16px/25px "PT Sans", sans-serif;
+  padding-bottom: 20px;
+  color: #323232;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_live\/sites\/all\/themes\/sr\/sass\/wysisyg\.scss}line{font-family:\0000322}}
+.tl-quote {
+  font: bold italic 25px/33px "PT Serif", serif;
+  color: #323232;
+  padding: 40px 30px;
+}

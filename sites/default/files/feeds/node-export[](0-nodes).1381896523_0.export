@@ -1,0 +1,687 @@
+array(
+  (object) array(
+      'vid' => '835',
+      'uid' => '11',
+      'title' => 'culture slide 5',
+      'log' => '',
+      'status' => '1',
+      'comment' => '1',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => 'e63cc458-a68a-4787-a30a-2999a5d945d8',
+      'nid' => '835',
+      'type' => 'culture_career_slideshow',
+      'language' => 'und',
+      'created' => '1374211305',
+      'changed' => '1381209384',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '1aea17d0-510c-4491-9871-073d709aac1b',
+      'revision_timestamp' => '1381209384',
+      'revision_uid' => '3',
+      'field_cc_slide_image' => array(
+        'und' => array(
+          array(
+            'fid' => '1110',
+            'alt' => '',
+            'title' => '',
+            'width' => '980',
+            'height' => '452',
+            'uid' => '3',
+            'filename' => 'career-2.jpg',
+            'uri' => 'public://career-2.jpg',
+            'filemime' => 'image/jpeg',
+            'filesize' => '211292',
+            'status' => '1',
+            'timestamp' => '1381209384',
+            'type' => 'undefined',
+            'uuid' => 'bdab34cd-bcc4-457b-b78e-9dd24bbd07bd',
+            'rdf_mapping' => array(),
+          ),
+        ),
+      ),
+      'metatags' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1374211305',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '11',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => array(
+        'pid' => '4372',
+        'source' => 'node/835',
+        'alias' => 'culture-slide-5',
+        'language' => 'und',
+      ),
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '831',
+      'uid' => '11',
+      'title' => 'cultire slide 4',
+      'log' => '',
+      'status' => '1',
+      'comment' => '1',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '3bc6c95e-1ee5-4183-b820-fe09b00f4d22',
+      'nid' => '831',
+      'type' => 'culture_career_slideshow',
+      'language' => 'und',
+      'created' => '1374211305',
+      'changed' => '1381209333',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '07523933-4276-4dde-916e-a7bddc014813',
+      'revision_timestamp' => '1381209333',
+      'revision_uid' => '3',
+      'field_cc_slide_image' => array(
+        'und' => array(
+          array(
+            'fid' => '1109',
+            'alt' => '',
+            'title' => '',
+            'width' => '980',
+            'height' => '452',
+            'uid' => '3',
+            'filename' => 'career-1.jpg',
+            'uri' => 'public://career-1.jpg',
+            'filemime' => 'image/jpeg',
+            'filesize' => '209396',
+            'status' => '1',
+            'timestamp' => '1381209333',
+            'type' => 'undefined',
+            'uuid' => 'f2a74825-1554-4aa1-bb06-f417331eb44b',
+            'rdf_mapping' => array(),
+          ),
+        ),
+      ),
+      'metatags' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1374211305',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '11',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => array(
+        'pid' => '4368',
+        'source' => 'node/831',
+        'alias' => 'cultire-slide-4',
+        'language' => 'und',
+      ),
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '826',
+      'uid' => '11',
+      'title' => 'culture slide 2',
+      'log' => '',
+      'status' => '1',
+      'comment' => '1',
+      'promote' => '0',
+      'sticky' => '0',
+      'vuuid' => '0bd6f61a-9616-4247-99a4-2b0d6c45d542',
+      'nid' => '826',
+      'type' => 'culture_career_slideshow',
+      'language' => 'und',
+      'created' => '1374211075',
+      'changed' => '1381209289',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'd83ddb03-ba88-4136-b788-09fb58ba9e35',
+      'revision_timestamp' => '1381209289',
+      'revision_uid' => '3',
+      'field_cc_slide_image' => array(
+        'und' => array(
+          array(
+            'fid' => '1108',
+            'alt' => '',
+            'title' => '',
+            'width' => '685',
+            'height' => '452',
+            'uid' => '3',
+            'filename' => 'cultures_slide_2.jpg',
+            'uri' => 'public://cultures_slide_2_0.jpg',
+            'filemime' => 'image/jpeg',
+            'filesize' => '77265',
+            'status' => '1',
+            'timestamp' => '1381209289',
+            'type' => 'undefined',
+            'uuid' => '7f1919ab-2238-45ca-84de-bf70ec32103b',
+            'rdf_mapping' => array(),
+          ),
+        ),
+      ),
+      'metatags' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1374211075',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '11',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => array(
+        'pid' => '4363',
+        'source' => 'node/826',
+        'alias' => 'culture-slide-2',
+        'language' => 'und',
+      ),
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '825',
+      'uid' => '11',
+      'title' => 'cultire slide 1',
+      'log' => '',
+      'status' => '1',
+      'comment' => '1',
+      'promote' => '0',
+      'sticky' => '0',
+      'vuuid' => 'f3e3ed4d-acaf-47fd-a875-d050416042a0',
+      'nid' => '825',
+      'type' => 'culture_career_slideshow',
+      'language' => 'und',
+      'created' => '1374211067',
+      'changed' => '1381209215',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'f4198bbd-ac2c-41ed-a396-82143e6fee8a',
+      'revision_timestamp' => '1381209215',
+      'revision_uid' => '3',
+      'field_cc_slide_image' => array(
+        'und' => array(
+          array(
+            'fid' => '1107',
+            'alt' => '',
+            'title' => '',
+            'width' => '980',
+            'height' => '452',
+            'uid' => '3',
+            'filename' => 'cultures_slide_1.jpg',
+            'uri' => 'public://cultures_slide_1_0.jpg',
+            'filemime' => 'image/jpeg',
+            'filesize' => '113635',
+            'status' => '1',
+            'timestamp' => '1381209215',
+            'type' => 'undefined',
+            'uuid' => 'e3ce6e2a-a8f8-4a4b-8498-fd39e262fcc3',
+            'rdf_mapping' => array(),
+          ),
+        ),
+      ),
+      'metatags' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1374211067',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '11',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => array(
+        'pid' => '4362',
+        'source' => 'node/825',
+        'alias' => 'cultire-slide-1',
+        'language' => 'und',
+      ),
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '827',
+      'uid' => '11',
+      'title' => 'cultire slide 3',
+      'log' => '',
+      'status' => '0',
+      'comment' => '1',
+      'promote' => '0',
+      'sticky' => '0',
+      'vuuid' => '230bf17e-2cc9-4725-8696-a1e70c28dc3a',
+      'nid' => '827',
+      'type' => 'culture_career_slideshow',
+      'language' => 'und',
+      'created' => '1374211083',
+      'changed' => '1380704363',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => 'e74835d8-76e6-4c1a-9efd-164e62cca9f5',
+      'revision_timestamp' => '1380704363',
+      'revision_uid' => '3',
+      'field_cc_slide_image' => array(
+        'und' => array(
+          array(
+            'fid' => '1042',
+            'alt' => '',
+            'title' => '',
+            'width' => '349',
+            'height' => '452',
+            'uid' => '3',
+            'filename' => 'cultures_slide_3.jpg',
+            'uri' => 'public://cultures_slide_3.jpg',
+            'filemime' => 'image/jpeg',
+            'filesize' => '56481',
+            'status' => '1',
+            'timestamp' => '1374211083',
+            'type' => 'undefined',
+            'uuid' => '027a7a34-a709-4f98-ba09-ee94067f1e1b',
+            'rdf_mapping' => array(),
+          ),
+        ),
+      ),
+      'metatags' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1374211083',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '11',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => array(
+        'pid' => '4364',
+        'source' => 'node/827',
+        'alias' => 'cultire-slide-3',
+        'language' => 'und',
+      ),
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+  (object) array(
+      'vid' => '837',
+      'uid' => '11',
+      'title' => 'Eros Vero',
+      'log' => '',
+      'status' => '0',
+      'comment' => '1',
+      'promote' => '1',
+      'sticky' => '0',
+      'vuuid' => '845240bd-eed6-4011-a0a1-d250252ee80b',
+      'nid' => '837',
+      'type' => 'culture_career_slideshow',
+      'language' => 'und',
+      'created' => '1374211305',
+      'changed' => '1374211305',
+      'tnid' => '0',
+      'translate' => '0',
+      'uuid' => '2a430aa7-42df-4b20-ae63-1de9d65e3bd4',
+      'revision_timestamp' => '1374211305',
+      'revision_uid' => '11',
+      'field_cc_slide_image' => array(
+        'und' => array(
+          array(
+            'fid' => '1045',
+            'alt' => 'Conventio dolor huic laoreet oppeto pecus quia secundum sudo valetudo.',
+            'title' => 'Bene blandit commoveo iaceo incassum jumentum luptatum vero virtus.',
+            'width' => '334',
+            'height' => '541',
+            'uid' => '1',
+            'filename' => 'imagefield_tkErbf.jpg',
+            'uri' => 'public:///imagefield_tkErbf.jpg',
+            'filemime' => 'image/jpg',
+            'filesize' => '6606',
+            'status' => '1',
+            'timestamp' => '1374211305',
+            'type' => 'undefined',
+            'uuid' => '46379cef-65ec-4545-8b02-cfd2a3e60b53',
+            'rdf_mapping' => array(),
+          ),
+        ),
+      ),
+      'metatags' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          'sioc:Item',
+          'foaf:Document',
+        ),
+        'title' => array(
+          'predicates' => array(
+            'dc:title',
+          ),
+        ),
+        'created' => array(
+          'predicates' => array(
+            'dc:date',
+            'dc:created',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'changed' => array(
+          'predicates' => array(
+            'dc:modified',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+        'body' => array(
+          'predicates' => array(
+            'content:encoded',
+          ),
+        ),
+        'uid' => array(
+          'predicates' => array(
+            'sioc:has_creator',
+          ),
+          'type' => 'rel',
+        ),
+        'name' => array(
+          'predicates' => array(
+            'foaf:name',
+          ),
+        ),
+        'comment_count' => array(
+          'predicates' => array(
+            'sioc:num_replies',
+          ),
+          'datatype' => 'xsd:integer',
+        ),
+        'last_activity' => array(
+          'predicates' => array(
+            'sioc:last_activity_date',
+          ),
+          'datatype' => 'xsd:dateTime',
+          'callback' => 'date_iso8601',
+        ),
+      ),
+      'cid' => '0',
+      'last_comment_timestamp' => '1374211305',
+      'last_comment_name' => NULL,
+      'last_comment_uid' => '11',
+      'comment_count' => '0',
+      'name' => 'admin',
+      'picture' => '0',
+      'data' => 'b:0;',
+      'path' => array(
+        'pid' => '4374',
+        'source' => 'node/837',
+        'alias' => 'eros-vero',
+        'language' => 'und',
+      ),
+      'menu' => NULL,
+      'node_export_drupal_version' => '7',
+    ),
+)<table data-thmr="thmr_3">
+</table>

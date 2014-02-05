@@ -1,0 +1,619 @@
+<?php
+require_once 'phpQuery-onefile.php';
+
+function sr_menu() {
+  $items['front'] = array(
+      'page callback' => 'sr_front_page',
+      'access callback' => true
+  );
+  $items['why-sr/thought-leadership'] = array(
+      'title' => 'Thought Leadership',
+      'page callback' => 'sr_thoughtleadership',
+      'access callback' => true
+  );
+  $items['why-sr'] = array(
+      'page callback' => 'redirect_to_aboutus',
+      'access callback' => true
+  );
+  $items['news'] = array(
+      'title' => 'News',
+      'page callback' => 'sr_news',
+      'access callback' => true
+  );
+
+  return $items;
+}
+
+// hide useless stuff in front page
+function sr_front_page() {
+  return '<img src="/sites/all/themes/sr/images/ajax-loader-1.gif" id="cycle-loader">';
+}
+
+function sr_thoughtleadership($arg1 = null, $arg2 = null) {
+  $view = views_get_view('thought_leadership');
+  if (!$arg2) {
+    $view->set_display('all_content');
+  } elseif ($arg1 == 'archives' && $arg2) {
+    $view->set_display('archives_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 == 'categories' && $arg2) {
+    $view->set_display('categories_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 == 'tags' && $arg2) {
+    $view->set_display('tags_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 && $arg2 == null) {
+    $view->set_display('tags_content');
+    $view->set_arguments(array($arg2));
+  }
+  $view->pre_execute();
+  $view->execute();
+
+  return $view->render();
+}
+
+function sr_news($arg1 = null, $arg2 = null) {
+  $view = views_get_view('news');
+
+  if (!$arg2) {
+    $view->set_display('all_content');
+  } elseif ($arg1 == 'archives' && $arg2) {
+    $view->set_display('archives_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 == 'categories' && $arg2) {
+    $view->set_display('categories_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 == 'tags' && $arg2) {
+    $view->set_display('tags_content');
+    $view->set_arguments(array($arg2));
+  } elseif ($arg1 && $arg2 == null) {
+    $view->set_display('tags_content');
+    $view->set_arguments(array($arg2));
+  }
+  $view->pre_execute();
+  $view->execute();
+
+  return $view->render();
+}
+
+function sr_block_info() {
+  $blocks['thought_leadership_archives'] = array(
+      'info' => t('Thought Leadership Archives Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['thought_leadership_categories'] = array(
+      'info' => t('Thought Leadership Categories Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['thought_leadership_tags'] = array(
+      'info' => t('Thought Leadership Tags Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['news_archives'] = array(
+      'info' => t('News Archives Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['news_categories'] = array(
+      'info' => t('News Categories Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['news_tags'] = array(
+      'info' => t('News Tags Filter'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['ourwork_options'] = array(
+      'info' => t('Our-works Options'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['clients_options'] = array(
+      'info' => t('Clients Options'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['culturecareers_slideshow'] = array(
+      'info' => t('Culture & Careers Slideshow'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['culturecareers_careers_links'] = array(
+      'info' => t('Culture & Careers Careers Links'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['culturecareers_culture'] = array(
+      'info' => t('Culture & Careers Culture'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['culturecareers_careers'] = array(
+      'info' => t('Culture & Careers Careers'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+
+  return $blocks;
+}
+
+function sr_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    /*
+     * thought leadership
+     */
+    case "thought_leadership_archives":
+      $sql = "select distinct FROM_UNIXTIME(n.created, '%Y%m') as createdate from node as n where n.type=:type order by created desc";
+      $result = db_query($sql, array(':type' => 'thought_leadership'));
+      $html = '<div class="accordion selected"><a href="#">Archives</a><ul>';
+      foreach ($result as $result_val) {
+        $y = substr($result_val->createdate, 0, 4);
+        $month = substr($result_val->createdate, 4);
+        $m = '';
+        switch ($month) {
+          case '01': $m = 'Jan';
+            break;
+          case '02': $m = 'Feb';
+            break;
+          case '03': $m = 'Mar';
+            break;
+          case '04': $m = 'Apr';
+            break;
+          case '05': $m = 'May';
+            break;
+          case '06': $m = 'Jun';
+            break;
+          case '07': $m = 'Jul';
+            break;
+          case '08': $m = 'Aug';
+            break;
+          case '09': $m = 'Sep';
+            break;
+          case '10': $m = 'Oct';
+            break;
+          case '11': $m = 'Nov';
+            break;
+          case '12': $m = 'Dec';
+            break;
+        }
+        $html .= "<li><a href='/why-sr/thought-leadership/archives/$result_val->createdate'>$m $y</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "thought_leadership_categories":
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->machine_name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['thought_leadership_categories']);
+      $html = '<div class="accordion selected"><a href="#">Categories</a><ul>';
+      foreach ($children as $v) {
+        $html .= "<li><a href='/why-sr/thought-leadership/categories/$v->name'>$v->name</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "thought_leadership_tags":
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->machine_name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['thought_leadership_tags']);
+      $html = '<div class="accordion selected"><a href="#">Tags</a><ul>';
+      foreach ($children as $v) {
+        $html .= "<li><a href='/why-sr/thought-leadership/tags/$v->name'>$v->name</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    /*
+     * news
+     */
+    case "news_archives":
+      $sql = "select distinct FROM_UNIXTIME(n.created, '%Y%m') as createdate from node as n where n.type=:type order by created desc";
+      $result = db_query($sql, array(':type' => 'news'));
+      $html = '<div class="accordion selected"><a href="#">Archives</a><ul>';
+      foreach ($result as $result_val) {
+        $y = substr($result_val->createdate, 0, 4);
+        $month = substr($result_val->createdate, 4);
+        $m = '';
+        switch ($month) {
+          case '01': $m = 'Jan';
+            break;
+          case '02': $m = 'Feb';
+            break;
+          case '03': $m = 'Mar';
+            break;
+          case '04': $m = 'Apr';
+            break;
+          case '05': $m = 'May';
+            break;
+          case '06': $m = 'Jun';
+            break;
+          case '07': $m = 'Jul';
+            break;
+          case '08': $m = 'Aug';
+            break;
+          case '09': $m = 'Sep';
+            break;
+          case '10': $m = 'Oct';
+            break;
+          case '11': $m = 'Nov';
+            break;
+          case '12': $m = 'Dec';
+            break;
+        }
+        $html .= "<li><a href='/news/archives/$result_val->createdate'>$m $y</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "news_categories":
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->machine_name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['news_categories']);
+      $html = '<div class="accordion selected"><a href="#">Categories</a><ul>';
+      foreach ($children as $v) {
+        $html .= "<li><a href='/news/categories/$v->name'>$v->name</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "news_tags":
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->machine_name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['news_tags']);
+      $html = '<div class="accordion selected"><a href="#">Tags</a><ul>';
+      foreach ($children as $v) {
+        $html .= "<li><a href='/news/tags/$v->name'>$v->name</a></li>";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+
+    /*
+     * our-work
+     */
+    case "ourwork_options":
+      // grab the expertise taxonomy
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['expertise']);
+
+      // create container HTML
+      $html = "<div class='isotope-options'>
+       <ul class='isotope-filters option-set clearfix new-nav'>";
+
+      // create expertise filter/tab HTML
+      $html_expertise = "<div id='expertise'>";
+      foreach ($children as $key => $value) {
+        if ($value->depth == 0) {
+          $html_expertise .= "<a href='#' data-tab='" . preg_replace('/\s+/', '', strtolower($value->name)) . "'>" . $value->name . "</a>";
+        }
+      }
+      $html_expertise .= "</div>";
+
+      // create deliverable HTML
+      $html_deliverable = "<div id='deliverable'>";
+      $count = 0;
+      $groups = array();
+      $item_html = "";
+      foreach ($children as $key => $value) {
+        $item_name = $value->name;
+        $item_mname = preg_replace('/\W+/', '', strtolower($item_name));
+        // 1st lv
+        if ($value->depth == 0) {
+          // parent, is the first item of this group
+          if ($count != 0) {
+            // not 1st time, close previous group div tag
+            $item_html .= "</div>";
+          }
+
+          $count++;
+          $item_html .= "<div class='group-$count'>
+        <a href='#filter=.$item_mname' class='filterbutton'>View All</a>";
+        } else {
+          $item_html .= "<span> / </span>
+        <a href='#filter=.$item_mname' class='filterbutton'>$item_name</a>";
+        }
+      }
+      $html_deliverable .= $item_html . "</div>";
+
+      $html .= $html_expertise . $html_deliverable . "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case "clients_options":
+      // grab the clients taxonomy
+      $vocab = taxonomy_get_vocabularies();
+      $vob_arr = array();
+      foreach ($vocab as $vocab_key => $vocab_val) {
+        $vob_arr[strtolower($vocab_val->name)] = $vocab_val->vid;
+      }
+      $children = taxonomy_get_tree($vob_arr['clients']);
+
+      $html = "<div class='isotope-options'>
+        <div id='clients'>
+          <h3>Clients</h3>
+          <ul id='filter' class='isotope-filters option-set clearfix new-nav'>
+          <li>
+          <a href='#filter=.all' class='filterbutton'>View All</a>
+          </li>";
+      $count = 0;
+      $groups = array();
+      $item_html = "";
+      foreach ($children as $key => $value) {
+        $item_name = $value->name;
+        $item_mname = preg_replace('/\W+/', '', strtolower($item_name));
+        $item_html .= "<span> / </span>
+        <li><a href='#filter=.$item_mname' class='filterbutton'>$item_name</a></li>";
+      }
+      $html .= $item_html . "</ul>
+        <div id='relayout'>
+          <a id='tileview' href='#'>Tile View</a>
+          <span> / </span>
+          <a id='listview' href='#'>List View</a>
+        </div>
+      </div>";
+      $block['content'] = $html;
+      break;
+
+    case 'culturecareers_slideshow':
+      $html = "<div id='slideshow'>";
+      $sql = "SELECT field_cc_slide_image_fid
+              FROM field_data_field_cc_slide_image as csi
+              LEFT JOIN node as n
+                ON n.nid = csi.entity_id
+              WHERE n.status = 1";
+      foreach (db_query($sql) as $result) {
+        $html .= '<div>';
+        $img = file_load($result->field_cc_slide_image_fid)->uri;
+        $html .= theme('image_style', array('path' => $img, 'style_name' => 'cc_slideshow'));
+        $html .= '</div>';
+      }
+      $html .= "</div><div id='slideshow-text'>
+                  <h3><span>Inspirational Performer?</span>Join the team.</h3>
+<p>Fundamental to the SR culture is our passion for building strong working relationships, internally and externally.</p>
+               </div></div>";
+      $block['content'] = $html;
+      break;
+
+    case 'culturecareers_careers_links':
+      $html = "<div id='careers-links'><h4>Job Opening</h4><ul>";
+      $sql = "SELECT n.nid, n.title, jl.field_cc_jobs_location_value
+              FROM node as n               
+              LEFT JOIN field_data_field_cc_jobs_location as jl
+                ON jl.entity_id = n.nid
+              WHERE n.type = 'culture_career_jobs' 
+                AND n.status = 1";
+      foreach (db_query($sql) as $result) {
+        $html .= "<li><a href='#jobs-$result->nid'>$result->title (" . strtoupper($result->field_cc_jobs_location_value) . ")</a></li> ";
+      }
+      $html .= "</ul></div>";
+      $block['content'] = $html;
+      break;
+
+    case 'culturecareers_culture':
+      $html = "<div id='culture-container'>";
+
+      $location_arr = array();
+      $event_arr = array();
+      $people_arr = array();
+      $event_lightbox_arr = array();
+
+      $sql_location = "SELECT n.nid, n.title, b.body_value, lt.field_cc_location_thumbnail_fid
+                       FROM node as n
+                       LEFT JOIN field_data_body as b
+                         ON b.entity_id = n.nid
+                       LEFT JOIN field_data_field_cc_location_thumbnail as lt
+                         ON lt.entity_id = n.nid
+                       WHERE n.type = 'culture_career_location'
+                         AND n.status = '1'
+                       LIMIT 3";
+      foreach (db_query($sql_location) as $result) {
+        $img = image_style_url('cc_location', file_load($result->field_cc_location_thumbnail_fid)->uri);
+
+        $temp = "<div class='location-items items'>";
+        $temp .= "<img src='$img' />";
+        $temp .= "<h3>$result->title</h3>";
+        $temp .= "<p>$result->body_value</p>";
+        $temp .= "</div>";
+
+        $location_arr[] = $temp;
+      }
+
+      $sql_people = "SELECT n.nid,
+                            n.title,
+                            b.body_value,
+                            pt.field_cc_people_thumbnail_fid
+                      FROM node as n
+                      LEFT JOIN field_data_body as b
+                        ON b.entity_id = n.nid
+                      LEFT JOIN field_data_field_cc_people_thumbnail as pt
+                        ON pt.entity_id = n.nid
+                      WHERE n.type = 'culture_career_people'
+                        AND n.status = '1'
+                      LIMIT 3";
+      foreach (db_query($sql_people) as $result) {
+        $img = image_style_url('cc_people', file_load($result->field_cc_people_thumbnail_fid)->uri);
+
+        $temp = "<div class='people-items items'>";
+        $temp .= "<img src='$img' />";
+        $temp .= "<p>$result->body_value</p>";
+        $temp .= "<h3>$result->title</h3>";
+        $temp .= "</div>";
+
+        $people_arr[] = $temp;
+      }
+
+      $sql_event = "SELECT n.nid,
+                           n.title,
+                           b.body_value, 
+                           et.field_cc_event_thumb_fid,
+                           d.field_date_value,
+                           ed.field_cc_event_description_value
+                    FROM node as n
+                    LEFT JOIN field_data_body as b
+                      ON b.entity_id = n.nid
+                    LEFT JOIN field_data_field_cc_event_thumb as et
+                      ON et.entity_id = n.nid
+                    LEFT JOIN field_data_field_date as d
+                      ON d.entity_id = n.nid
+                    LEFT JOIN field_data_field_cc_event_description as ed
+                      ON ed.entity_id = n.nid
+                    WHERE n.type = 'culture_career_event'
+                      AND n.status = '1'
+                    LIMIT 3";
+      foreach (db_query($sql_event) as $key => $result) {
+        // item html
+        $thumb = image_style_url('cc_event', file_load($result->field_cc_event_thumb_fid)->uri);
+        $temp = "<div class='event-items items'>";
+        $temp .= "<a href='#event-$key' rel='superbox[content]'>";
+        $temp .= "<img src='$thumb' />";
+        $temp .= "<h3>$result->title</h3>";
+        $temp .= "<p>$result->body_value</p>";
+        $temp .= "</a>";
+        $temp .= "</div>";
+        $event_arr[] = $temp;
+
+        $imgs = array();
+        $sql_img = "SELECT field_cc_event_images_fid
+                    FROM field_data_field_cc_event_images
+                    WHERE entity_id = $result->nid";
+        foreach (db_query($sql_img) as $img) {
+          $imgs[] = $img->field_cc_event_images_fid;
+        }
+
+        $path = isset($_GET['q']) ? $_GET['q'] : '<front>';
+        $link = url($path, array('absolute' => TRUE));
+
+        // lightbox html
+        $temp2 = "<div id='event-$key'>
+                    <div class='event-content'>
+                      <h3>$result->title</h3>
+                      <p>Date: " . date('M Y', strtotime($result->field_date_value)) . "</p>
+                      <p class='desc'>$result->body_value</p>
+                      <div class='event-share'>
+                        <h4>Sare this Event</h4>
+                        <a href='https://www.facebook.com/sharer/sharer.php?u=$link%23event-$key' target='_blank'>Facebook</a> /
+                        <a href='https://twitter.com/share?url=$link%23event-$key' target='_blank'>Twitter</a>
+                      </div>
+                    </div>
+                    <div class='event-gallery'>
+                      <div class='event-gallery-big'>";
+
+        foreach ($imgs as $key => $fid) {
+          $big = image_style_url('cc_event_lightbox_enlarge', str_replace("///", "//", file_load($fid)->uri));
+          if ($key == 0)
+            $temp2 .= "<img id='gallery-$key' src='$big' class='active' />";
+          else
+            $temp2 .= "<img id='gallery-$key' src='$big' />";
+        }
+
+        $temp2 .= "</div>
+                      <div class='event-gallery-thumbs'>";
+
+        foreach ($imgs as $key => $fid) {
+          $small = image_style_url('cc_event_lightbox_thumbs', str_replace("///", "//", file_load($fid)->uri));
+          if ($key == 0)
+            $temp2 .= "<a href='#gallery-$key' class='current'><img src='$small' /></a>";
+          else
+            $temp2 .= "<a href='#gallery-$key'><img src='$small' /></a>";
+        }
+
+        $temp2 .= "</div>
+                    </div>
+                  </div>";
+
+        $event_lightbox_arr[] = $temp2;
+      }
+
+
+      // hardcode structure
+      $html .= "<div id='col-0'>";
+      $html .= $location_arr[0];
+      $html .= $event_arr[0];
+      $html .= $people_arr[0];
+      $html .= "</div>";
+
+      $html .= "<div id='col-1'>";
+      $html .= $location_arr[1];
+      $html .= $people_arr[1];
+      $html .= $event_arr[1];
+      $html .= "</div>";
+
+      $html .= "<div id='col-2'>";
+      $html .= $location_arr[2];
+      $html .= $event_arr[2];
+      $html .= $people_arr[2];
+      $html .= "</div>";
+
+      $html .= "</div><div id='event_lightbox'>";
+      foreach ($event_lightbox_arr as $event) {
+        $html .= $event;
+      }
+      $html .= "</div>";
+      $block['content'] = $html;
+      break;
+
+    case 'culturecareers_careers':
+      $html = "<div id='careers-container'><ul>";
+      $temp = "<div id='careers-content'>";
+
+      $sql = "SELECT n.nid,
+                     n.title,
+                     n.created,
+                     b.body_value,
+                     jl.field_cc_jobs_location_value,
+                     p.field_pdf_fid
+              FROM node as n               
+              LEFT JOIN field_data_field_cc_jobs_location as jl
+                ON jl.entity_id = n.nid
+              LEFT JOIN field_data_field_pdf as p
+                ON p.entity_id = n.nid
+              LEFT JOIN field_data_body as b
+                ON b.entity_id = n.nid
+              WHERE n.type = 'culture_career_jobs'
+                AND n.status = 1";
+      foreach (db_query($sql) as $key => $result) {
+        if ($key == 0) {
+          $html .= "<li><a href='#jobs-$result->nid' class='current'>$result->title<br/>(" . $result->field_cc_jobs_location_value . ")
+                      <br/>
+                      <span>Posting date: " . date('d/m/y', $result->created) . "</span>
+                    </a></li>";
+          $temp .= "<div id='jobs-$result->nid' class='active'>$result->body_value<a class='careers-download' target='_blank' href='"
+                  . file_create_url(file_load($result->field_pdf_fid)->uri)
+                  . "'>Download pdf for more detail</a><a href='mailto:infosg@sedgwick-richardson.com' class='careers-apply'>Contact us for more details</a></div>";
+        } else {
+          $html .= "<li><a href='#jobs-$result->nid'>$result->title<br/>(" . $result->field_cc_jobs_location_value . ")
+                      <br/>
+                      <span>Posting date: " . date('d/m/y', $result->created) . "</span>      
+                    </a></li>";
+          $temp .= "<div id='jobs-$result->nid'>$result->body_value<a class='careers-download' target='_blank' href='"
+                  . file_create_url(file_load($result->field_pdf_fid)->uri)
+                  . "'>Download pdf for more detail</a><a href='mailto:infosg@sedgwick-richardson.com' class='careers-apply'>Contact us for more details</a></div>";
+        }
+      }
+      $temp .= "</div>";
+      $html .= "</ul>" . $temp;
+
+      $html .= "</div>";
+      $block['content'] = $html;
+      break;
+  }
+
+  return $block;
+}
+

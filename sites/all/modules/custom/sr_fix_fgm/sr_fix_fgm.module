@@ -1,0 +1,44 @@
+<?php
+
+function sr_fix_fgm_code($view) {
+  $output = '';
+  module_load_include('inc', 'node', 'node.pages');
+  $nid = empty($view->args[0]) ? 0 : $view->args[0];
+  if (is_numeric($nid)) {
+    $node = node_load($nid);
+    if ($node->nid) {
+      $temp = drupal_get_form('our_work_node_form', $node);
+      $group = $temp['field_case_study'][LANGUAGE_NONE][0]['fgm_field_collection_item_field_case_study_form_group_our_work_content_pairs']['fields']['items'];
+      foreach ($group as $group_key => $group_val) {
+        if (is_numeric($group_key)) {
+
+          $our_work_pics_fid = empty($group_val['field_our_work_pics'][LANGUAGE_NONE][0]['#file']) ? 0 : $group_val['field_our_work_pics'][LANGUAGE_NONE][0]['#file'];
+          $our_work_pics_enlarge_fid = empty($group_val['field_our_work_pics_enlarge'][LANGUAGE_NONE][0]['#file']) ? 0 : $group_val['field_our_work_pics_enlarge'][LANGUAGE_NONE][0]['#file'];
+          $our_work_paras = $group_val['field_our_work_paras'][LANGUAGE_NONE]['value']['#default_value'];
+          $alt = check_plain($group_val['field_our_work_pics'][LANGUAGE_NONE][0]['#entity']->field_our_work_pics[LANGUAGE_NONE][$group_key]['alt']);
+          
+          if (!empty($our_work_pics_enlarge_fid)) {
+            $output .= "<a class='pics' alt = '" . $alt . "' href='" . file_create_url($our_work_pics_enlarge_fid->uri) . "' rel='superbox[image]'><div class='enlarge'></div>";
+          } else {
+            $output .= "<div class='pics'>";
+          }
+
+          if (!empty($our_work_pics_fid)) {
+            $output .= theme('image', array('path' => $our_work_pics_fid->uri, 'alt' => $alt));
+          }
+
+          if (!empty($our_work_pics_enlarge_fid)) {
+            $output .= "</a>";
+          } else {
+            $output .= "</div>";
+          }
+
+          if (!empty($our_work_paras)) {
+            $output .= $our_work_paras;
+          }
+        }
+      }
+    }
+  }
+  return $output;
+}

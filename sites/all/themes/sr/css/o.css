@@ -1,0 +1,3418 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Sans+Narrow:400,700|PT+Serif:400,400italic,700,700italic);
+/*
+  * Author: Kelvin @ Xenyo
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Program\%20Files\%20\(x86\)\/Scout\/vendor\/gems\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000317}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Program\%20Files\%20\(x86\)\/Scout\/vendor\/gems\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000322}}
+html {
+  line-height: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Program\%20Files\%20\(x86\)\/Scout\/vendor\/gems\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000324}}
+ol, ul {
+  list-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Program\%20Files\%20\(x86\)\/Scout\/vendor\/gems\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000326}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Program\%20Files\%20\(x86\)\/Scout\/vendor\/gems\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000328}}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Program\%20Files\%20\(x86\)\/Scout\/vendor\/gems\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000330}}
+q, blockquote {
+  quotes: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Program\%20Files\%20\(x86\)\/Scout\/vendor\/gems\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003103}}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Program\%20Files\%20\(x86\)\/Scout\/vendor\/gems\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000332}}
+a img {
+  border: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Program\%20Files\%20\(x86\)\/Scout\/vendor\/gems\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003116}}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+  * global style
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000324}}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000328}}
+html {
+  background-color: #222222;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000332}}
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  color: #3c3c3c;
+  background-color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000339}}
+a {
+  text-decoration: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000343}}
+a:active, a:focus {
+  outline: none;
+  -moz-outline-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000348}}
+#page, #header, #main, #footer {
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000352}}
+#header-top-wrap, #footer-wrap {
+  width: 945px;
+  margin: 0 auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000357}}
+.form-item, .form-actions, .item-list ul, .item-list ul li {
+  margin: 0;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000362}}
+ul.tabs.primary {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000366}}
+div#main {
+  padding-top: 62px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  min-height: 100px;
+  height: auto !important;
+  height: 100%;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000373}}
+div#main.hasSidebar {
+  background: url("../images/bg-hassidebar.png") repeat-y center top;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000379}}
+#lightbox2-overlay {
+  /*opacity: 0.8!important;*/
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000383}}
+#outerImageContainer {
+  border: 30px solid white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000388}}
+#header {
+  border-top: 2px solid #f58d3a;
+  position: fixed;
+  z-index: 50;
+  background: #222222;
+  -webkit-box-shadow: #5f5f5f 0 0 5px;
+  -moz-box-shadow: #5f5f5f 0 0 5px;
+  box-shadow: #5f5f5f 0 0 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000394}}
+#header #header-top-wrap {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000396}}
+#header #header-top-wrap #header-top {
+  height: 62px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\0000398}}
+#header #header-top-wrap #header-top #header-left {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003101}}
+#header #header-top-wrap #header-top #header-left:hover #logo {
+  background: url("../images/logo-hover.png") no-repeat left top;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003104}}
+#header #header-top-wrap #header-top #header-left:hover #triangle-hotspot {
+  background: url("../images/main-menu-arrow-hover.png") no-repeat center center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003108}}
+#header #header-top-wrap #header-top #header-left #logo {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  display: block;
+  width: 110px;
+  height: 62px;
+  z-index: 51;
+  background: url("../images/logo.png") no-repeat left top;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003117}}
+#header #header-top-wrap #header-top #header-left #logo:hover {
+  /*background: url('../images/logo-hover.png') no-repeat left top;*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003121}}
+#header #header-top-wrap #header-top #header-left #triangle-hotspot {
+  height: 62px;
+  left: 125px;
+  position: absolute;
+  top: 0;
+  width: 35px;
+  z-index: 52;
+  background: url("../images/main-menu-arrow.png") no-repeat center center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003129}}
+#header #header-top-wrap #header-top #header-left #triangle-hotspot:hover {
+  /*background: url('../images/main-menu-arrow-hover.png') no-repeat center center;*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003133}}
+#header #header-top-wrap #header-top #header-left #header-left-pulldown {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 192px;
+  background: #222222;
+  padding: 0;
+  z-index: 50;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003144}}
+#header #header-top-wrap #header-top #header-left #header-left-pulldown .menu li {
+  /*padding: 1px 0;*/
+  padding: 0;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003149}}
+#header #header-top-wrap #header-top #header-left #header-left-pulldown .menu li a {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  display: block;
+  /*height: 36px;*/
+  padding: 0 12px;
+  height: 0;
+  overflow: hidden;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #d5d5d5;
+  line-height: 36px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003160}}
+#header #header-top-wrap #header-top #header-left #header-left-pulldown .menu li a:hover {
+  background: black;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003167}}
+#header #header-top-wrap #header-top #header-left:hover > #header-left-pulldown {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  padding: 15px 0 28px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003170}}
+#header #header-top-wrap #header-top #header-left:hover > #header-left-pulldown li {
+  padding: 1px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003172}}
+#header #header-top-wrap #header-top #header-left:hover > #header-left-pulldown li a {
+  height: 36px;
+  overflow: visible;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003179}}
+#header #header-top-wrap #header-top #parent-title, #header #header-top-wrap #header-top #page-title {
+  display: block;
+  color: white;
+  float: left;
+  /*font: bold 14px/62px $pt_sans_narrow;*/
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 20px;
+  font-family: "PT Sans Narrow", sans-serif;
+  padding-left: 208px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003190}}
+#header #header-top-wrap #header-top #parent-title a, #header #header-top-wrap #header-top #page-title a {
+  color: #919191;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003192}}
+#header #header-top-wrap #header-top #parent-title a:hover, #header #header-top-wrap #header-top #page-title a:hover {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003197}}
+#header #header-top-wrap #header-top #parent-title {
+  width: 330px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003199}}
+#header #header-top-wrap #header-top #parent-title + #page-title {
+  padding-left: 5px;
+  width: 330px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003204}}
+#header #header-top-wrap #header-top #header-right {
+  float: right;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003207}}
+#header #header-top-wrap #header-top #header-right #header-right-menu {
+  padding-right: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003209}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li {
+  float: left;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003212}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li a {
+  display: block;
+  float: left;
+  height: 62px;
+  line-height: 62px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: bold;
+  color: #919191;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003222}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li a:hover, #header #header-top-wrap #header-top #header-right #header-right-menu li a.active {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003226}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li {
+  width: 216px;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003229}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area {
+  width: 100%;
+  margin-left: 180px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003234}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area:hover {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003237}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search-trigger {
+  cursor: auto;
+  background: url("../images/search.png") no-repeat center center;
+  text-indent: -9999px;
+  width: 16px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003244}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search {
+  display: block;
+  float: left;
+  height: 62px;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003249}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search .views-exposed-widgets, #header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search #edit-keys-wrapper, #header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search .views-exposed-widget {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003254}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search #edit-keys-wrapper label {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003258}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search input[type=text] {
+  margin-right: 10px;
+  border: none;
+  border-bottom: 1px solid #b4b4b4;
+  margin: 17px 0 0 0;
+  width: 180px;
+  display: block;
+  height: 28px;
+  background: transparent;
+  outline: none;
+  line-height: 26px;
+  color: #919191;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003271}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search input[type=text]:focus, #header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search input[type=text]:hover {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003275}}
+#header #header-top-wrap #header-top #header-right #header-right-menu li#search-li #search-area #search input[type=submit] {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003283}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown {
+  position: absolute;
+  top: 62px;
+  right: 0;
+  width: 250px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  background: #222222;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003294}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown.show {
+  height: 56px;
+  opacity: 1;
+  overflow: visible;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003299}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown #social {
+  padding: 16px 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003301}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown #social .addthis_toolbox {
+  overflow: hidden;
+  background: transparent;
+  width: auto;
+  padding: 0;
+  border: none;
+  position: static;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003308}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown #social .addthis_toolbox a {
+  float: left;
+  display: block;
+  height: 24px;
+  text-indent: -9999px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003314}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown #social .addthis_toolbox a.addthis_button_email {
+  background: url("../images/mail.png") no-repeat center center;
+  width: 20px;
+  padding: 0 10px 0 7px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003319}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown #social .addthis_toolbox a.addthis_button_facebook {
+  background: url("../images/facebook.png") no-repeat center center;
+  width: 11px;
+  padding: 0 9px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003324}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown #social .addthis_toolbox a.addthis_button_twitter {
+  background: url("../images/twitter.png") no-repeat center center;
+  width: 14px;
+  padding: 0 8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003329}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown #social .addthis_toolbox a.addthis_button_linkedin {
+  background: url("../images/linkedin.png") no-repeat center center;
+  width: 17px;
+  padding: 0 8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003334}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown #social .addthis_toolbox a span {
+  background-image: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003340}}
+#header #header-top-wrap #header-top #header-right #header-right-pulldown #header-right-pulldown-close {
+  width: 24px;
+  height: 24px;
+  background: url("../images/header-right-pulldown-close.png") no-repeat center center;
+  position: absolute;
+  top: 16px;
+  right: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003352}}
+#header #header-bottom-wrap {
+  background: #454545;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003354}}
+#header #header-bottom-wrap #header-bottom {
+  width: 945px;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003357}}
+#header #header-bottom-wrap #header-bottom .menu {
+  padding-left: 208px;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003360}}
+#header #header-bottom-wrap #header-bottom .menu li {
+  float: left;
+  padding-right: 34px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003363}}
+#header #header-bottom-wrap #header-bottom .menu li a {
+  color: #919191;
+  font: bold 14px/45px "PT Sans Narrow", sans-serif;
+  display: block;
+  height: 45px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003368}}
+#header #header-bottom-wrap #header-bottom .menu li a.active-trail {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003377}}
+#header #header-bg {
+  background: #222222;
+  position: absolute;
+  z-index: -1;
+  height: 62px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003391}}
+#footer {
+  border-top: 2px solid #f58d3a;
+  background: #222222;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003394}}
+#footer #footer-top {
+  height: 40px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003399}}
+#footer #footer-top #footer-menu-1 {
+  float: left;
+  background: #cb7835;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003402}}
+#footer #footer-top #footer-menu-1 li {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003404}}
+#footer #footer-top #footer-menu-1 li a {
+  background: #cb7835;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003406}}
+#footer #footer-top #footer-menu-1 li a:hover {
+  background: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003412}}
+#footer #footer-top #footer-menu-2 {
+  float: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003414}}
+#footer #footer-top #footer-menu-2 li {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003419}}
+#footer #footer-top a {
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003428}}
+#footer #footer-top a:hover {
+  background-color: #505050;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003433}}
+#footer #footer-bottom {
+  height: 124px;
+  color: white;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003437}}
+#footer #footer-bottom #copyright {
+  float: left;
+  height: 100%;
+  width: 800px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003441}}
+#footer #footer-bottom #copyright h3 {
+  font-size: 16px;
+  font-family: "PT Serif", serif;
+  font-style: italic;
+  padding: 27px 0 17px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003447}}
+#footer #footer-bottom #copyright h4 {
+  font-size: 12px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003452}}
+#footer #footer-bottom #footer-logo {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 106px;
+  height: 41px;
+  padding: 30px 21px 0 0;
+  display: block;
+  float: right;
+  background: url("../images/logo.png") no-repeat left bottom;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003460}}
+#footer #footer-bottom #footer-logo:hover {
+  background: url("../images/logo-hover.png") no-repeat left bottom;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003470}}
+body.logged-in section.region-sidebar {
+  top: 91px !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003522}}
+#ascrail2000, #ascrail2000 div {
+  cursor: pointer;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003529}}
+.tl-desc {
+  font: italic 18px/30px "PT Serif", serif;
+  padding-bottom: 32px;
+  color: #3c3c3c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003535}}
+.tl-heading {
+  font: bold 16px/25px "PT Sans", sans-serif;
+  padding-bottom: 20px;
+  color: #323232;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003541}}
+.tl-quote {
+  font: bold italic 25px/33px "PT Serif", serif;
+  color: #323232;
+  padding: 40px 30px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003547}}
+.tl-em {
+  font: italic 18px/30px "PT Sans", sans-serif;
+  color: #3c3c3c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003555}}
+nav.control {
+  background: url("../images/why_sr/about_us/nav.png") repeat-x center top;
+  position: relative;
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003559}}
+nav.control + * {
+  margin-top: -20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003562}}
+nav.control .control-wrap {
+  width: 406px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003566}}
+nav.control .control-wrap a {
+  color: #3c3c3c;
+  display: block;
+  float: left;
+  height: 80px;
+  width: 204px;
+  background: url("../images/why_sr/about_us/a.png") no-repeat center top;
+  font: bold italic 20px/62px "PT Serif", serif;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003575}}
+nav.control .control-wrap a.current {
+  background: url("../images/why_sr/about_us/a-current.png") no-repeat center top;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003578}}
+nav.control .control-wrap a:first-child {
+  margin-right: -2px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003588}}
+#superbox-overlay, #superbox-container, #superbox-container * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003595}}
+.accordion {
+  /*  @include transition-property(all);
+    @include transition-duration(.5s);*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003598}}
+.accordion > a.suffix:after {
+  content: " +";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003601}}
+.accordion ul {
+  /*    @include opacity(0);
+      @include transition-property(all);
+      @include transition-duration(.5s);*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003605}}
+.accordion ul a, .accordion ul span {
+  display: block;
+  padding-bottom: 13px;
+  /*      height: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        @include transition-property(all);
+        @include transition-duration(.5s);*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003613}}
+.accordion ul a:hover, .accordion ul span:hover {
+  text-decoration: underline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003619}}
+.accordion.selected > a.suffix:after {
+  content: " -";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003622}}
+.accordion.selected ul {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003624}}
+.accordion.selected ul a, .accordion.selected ul span {
+  overflow: visible;
+}
+
+/*
+  * Front page
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003639}}
+body.front {
+  background-color: #222;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003641}}
+body.front #header {
+  background: rgba(0, 0, 0, 0.8);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003644}}
+body.front #footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003648}}
+body.front #footer #footer-bottom {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003652}}
+body.front #main {
+  padding-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003655}}
+body.front #maximage {
+  z-index: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003658}}
+body.front #content {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003663}}
+body.front #nav {
+  position: absolute;
+  bottom: 10px;
+  z-index: 20;
+  /*opacity: 0;*/
+  left: 50%;
+  margin-left: -70px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003670}}
+body.front #nav a {
+  float: left;
+  margin-left: 15px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/main/slideshow_navdot.png") no-repeat center top;
+  text-indent: -9999px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003678}}
+body.front #nav a:first-child {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003681}}
+body.front #nav a:hover {
+  background-position: center bottom;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003684}}
+body.front #nav a.activeSlide {
+  background-position: center center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003689}}
+body.front .mask {
+  background: url("../images/main/dots-bg.png") repeat scroll center top transparent;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003695}}
+body.front .mc-image:first-child .in-slide-content {
+  opacity: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003698}}
+body.front .in-slide-content {
+  width: 780px;
+  height: 260px;
+  z-index: 30;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -130px;
+  margin-left: -390px;
+  opacity: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003708}}
+body.front .in-slide-content .center-wrap {
+  position: relative;
+  text-align: center;
+  background: url("../images/main/block.png") no-repeat center 72px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003712}}
+body.front .in-slide-content .center-wrap img {
+  top: 0 !important;
+  position: static !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003716}}
+body.front .in-slide-content .center-wrap h3, body.front .in-slide-content .center-wrap a {
+  position: absolute;
+  z-index: 65;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003721}}
+body.front .in-slide-content .center-wrap h3 {
+  display: block;
+  width: 780px;
+  z-index: 65;
+  top: 197px;
+  height: 20px;
+  font-family: "PT Serif", serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 17px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003732}}
+body.front .in-slide-content .center-wrap a {
+  text-align: center;
+  top: 228px;
+  left: 325px;
+  background: transparent;
+  padding: 5px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+  z-index: 99;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003745}}
+body.front .in-slide-content .center-wrap a:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003751}}
+body.front .darker {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#00f58d3a', endColorstr='#00f58d3a');
+  z-index: 1;
+  position: absolute;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003758}}
+body.front .darker.show {
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#66f58d3a', endColorstr='#66f58d3a');
+}
+
+/*
+  * Our work page
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003771}}
+body.our-work {
+  /*  #page {
+    position: relative;
+    }
+    #main {
+    padding-bottom: 166px;
+    }
+    #footer {
+    position: absolute;
+    bottom: 0;
+  }*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003782}}
+body.our-work #slogan {
+  font-size: 25px;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #3c3c3c;
+  padding: 40px 0;
+  text-align: center;
+  line-height: 36px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003792}}
+body.our-work #block-sr-ourwork-options {
+  background: #ececec;
+  border-bottom: 2px solid #dedede;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003795}}
+body.our-work #block-sr-ourwork-options .isotope-options {
+  width: 945px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003799}}
+body.our-work #block-sr-ourwork-options .isotope-options #expertise, body.our-work #block-sr-ourwork-options .isotope-options #deliverable {
+  float: left;
+  padding-top: 48px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003802}}
+body.our-work #block-sr-ourwork-options .isotope-options #expertise h3, body.our-work #block-sr-ourwork-options .isotope-options #deliverable h3 {
+  font-size: 15px;
+  color: #232323;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003811}}
+body.our-work #block-sr-ourwork-options .isotope-options #expertise {
+  width: 305px;
+  padding-bottom: 48px;
+  margin-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003815}}
+body.our-work #block-sr-ourwork-options .isotope-options #expertise a {
+  display: block;
+  height: 30px;
+  margin-bottom: 5px;
+  background: #222222 url("../images/our_work/isotope_nav_arrow.png") no-repeat 273px center;
+  color: white;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: bold;
+  padding-left: 20px;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003828}}
+body.our-work #block-sr-ourwork-options .isotope-options #expertise a:last-child {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003831}}
+body.our-work #block-sr-ourwork-options .isotope-options #expertise a.selected, body.our-work #block-sr-ourwork-options .isotope-options #expertise a.highlight {
+  background: #f58d3a url("../images/our_work/isotope_nav_circle.png") no-repeat 273px center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003837}}
+body.our-work #block-sr-ourwork-options .isotope-options #deliverable div {
+  padding-top: 6px;
+  width: 620px;
+  line-height: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003841}}
+body.our-work #block-sr-ourwork-options .isotope-options #deliverable div a {
+  font-size: 15px;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #3c3c3c;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003846}}
+body.our-work #block-sr-ourwork-options .isotope-options #deliverable div a:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003849}}
+body.our-work #block-sr-ourwork-options .isotope-options #deliverable div a.selected, body.our-work #block-sr-ourwork-options .isotope-options #deliverable div a.highlight {
+  font-weight: bold;
+  color: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003852}}
+body.our-work #block-sr-ourwork-options .isotope-options #deliverable div a.selected:hover, body.our-work #block-sr-ourwork-options .isotope-options #deliverable div a.highlight:hover {
+  color: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003861}}
+body.our-work #isotope-container {
+  width: 960px;
+  margin: 20px auto 80px;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003865}}
+body.our-work #isotope-container .isotope-element {
+  width: 305px;
+  height: 195px;
+  margin: 7px 7px 8px 8px;
+  background: white;
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003871}}
+body.our-work #isotope-container .isotope-element .item-container {
+  display: block;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003876}}
+body.our-work #isotope-container .isotope-element .item-container .thumb-hover {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  background-color: rgba(245, 141, 58, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccf58d3a', endColorstr='#ccf58d3a');
+  position: absolute;
+  left: 0;
+  top: 190px;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  text-align: center;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003889}}
+body.our-work #isotope-container .isotope-element .item-container .thumb-hover h3 {
+  padding-top: 88px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003896}}
+body.our-work #isotope-container .isotope-element .item-container .thumb-hover h4 {
+  text-decoration: underline;
+  padding-top: 13px;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003905}}
+body.our-work #isotope-container .isotope-element .item-container:hover .thumb-hover {
+  top: 0;
+  background-color: rgba(245, 141, 58, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccf58d3a', endColorstr='#ccf58d3a');
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003910}}
+body.our-work #isotope-container .isotope-element .item-container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003917}}
+body.our-work #isotope-container .isotope-element div.item-container .thumb-hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  background: black;
+  top: 195px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003922}}
+body.our-work #isotope-container .isotope-element div.item-container:hover .thumb-hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#cc000000', endColorstr='#cc000000');
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003928}}
+body.our-work #loadmore {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  display: block;
+  background: #222222;
+  width: 305px;
+  margin: 0 auto 80px;
+  height: 45px;
+  color: white;
+  text-align: center;
+  font: italic bold 17px/45px "PT Sans", sans-serif;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003940}}
+body.our-work #loadmore:hover {
+  background: #6c6c6c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003947}}
+body.node-type-our-work #banner {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003952}}
+body.node-type-our-work #banner #banner-text {
+  position: absolute;
+  width: 386px;
+  z-index: 12;
+  color: #363636;
+  font-size: 15px;
+  /*@include box-sizing(content-box);*/
+  word-wrap: break-word;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003958}}
+body.node-type-our-work #banner #banner-text a {
+  color: #363636;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003963}}
+body.node-type-our-work #banner #banner-text #banner-text-top {
+  padding: 30px 30px 20px;
+  /*background: rgba(255, 255, 255, 0.8);*/
+  background: rgba(255, 255, 255, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccffffff', endColorstr='#ccffffff');
+  margin-bottom: 2px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003969}}
+body.node-type-our-work #banner #banner-text #banner-text-top h3 {
+  font-size: 24px;
+  padding-bottom: 8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003973}}
+body.node-type-our-work #banner #banner-text #banner-text-top h2 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 28px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003978}}
+body.node-type-our-work #banner #banner-text #banner-text-top h4 {
+  padding-bottom: 12px;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003983}}
+body.node-type-our-work #banner #banner-text #banner-text-bottom {
+  background: rgba(255, 255, 255, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccffffff', endColorstr='#ccffffff');
+  padding: 15px 28px;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003988}}
+body.node-type-our-work #banner #banner-text #banner-text-bottom #pager {
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003990}}
+body.node-type-our-work #banner #banner-text #banner-text-bottom #pager #prev {
+  float: left;
+  background: url("../images/our_work/pager_prev2.png") no-repeat left center;
+  padding-left: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003995}}
+body.node-type-our-work #banner #banner-text #banner-text-bottom #pager #next {
+  float: right;
+  background: url("../images/our_work/pager_next2.png") no-repeat right center;
+  padding-right: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031000}}
+body.node-type-our-work #banner #banner-text #banner-text-bottom #pager .disable {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031007}}
+body.node-type-our-work #maincontent {
+  position: relative;
+  z-index: 13;
+  top: 660px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031011}}
+body.node-type-our-work #maincontent #maincontent-wrap {
+  background: #f6f6f6;
+  /*@include box-shadow(#888 0px -3px 5px);*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031014}}
+body.node-type-our-work #maincontent #maincontent-wrap > div, body.node-type-our-work #maincontent #maincontent-wrap #title-wrap {
+  width: 945px;
+  margin: 0 auto 30px;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031019}}
+body.node-type-our-work #maincontent #maincontent-wrap #title {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031025}}
+body.node-type-our-work #maincontent #maincontent-wrap #title h2 {
+  height: 60px;
+  font: bold 20px/60px "PT Serif", serif;
+  color: #888888;
+  display: block;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031033}}
+body.node-type-our-work #maincontent #maincontent-wrap #o-r {
+  padding: 20px 0 30px;
+  overflow: hidden;
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 35px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031038}}
+body.node-type-our-work #maincontent #maincontent-wrap #o-r #overview, body.node-type-our-work #maincontent #maincontent-wrap #o-r #results {
+  width: 460px;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031041}}
+body.node-type-our-work #maincontent #maincontent-wrap #o-r #overview h3, body.node-type-our-work #maincontent #maincontent-wrap #o-r #results h3 {
+  font: italic bold 20px "PT Serif", serif;
+  color: #3c3c3c;
+  padding-bottom: 8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031046}}
+body.node-type-our-work #maincontent #maincontent-wrap #o-r #overview p, body.node-type-our-work #maincontent #maincontent-wrap #o-r #results p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3c3c3c;
+  margin-bottom: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031053}}
+body.node-type-our-work #maincontent #maincontent-wrap #o-r #results {
+  float: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031058}}
+body.node-type-our-work #maincontent #maincontent-wrap #pairs .pics {
+  position: relative;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031061}}
+body.node-type-our-work #maincontent #maincontent-wrap #pairs .pics .enlarge {
+  display: none;
+  width: 80px;
+  height: 80px;
+  background: url("../images/our_work/enlarge.png") no-repeat center top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40px 0 0 -40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031070}}
+body.node-type-our-work #maincontent #maincontent-wrap #pairs .pics .enlarge:hover {
+  background-position: center bottom;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031074}}
+body.node-type-our-work #maincontent #maincontent-wrap #pairs .pics:hover .enlarge {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031077}}
+body.node-type-our-work #maincontent #maincontent-wrap #pairs .pics img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 16px;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031084}}
+body.node-type-our-work #maincontent #maincontent-wrap #pairs p {
+  display: block;
+  width: 700px;
+  padding-bottom: 52px;
+  font: normal 15px/22px "PT Sans", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031091}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel {
+  width: 100%;
+  background: #ececec;
+  border-top: 2px solid #dcdcdc;
+  padding-bottom: 70px;
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031097}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel {
+  width: 1007px;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031100}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-header {
+  width: 945px;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031103}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-header #pager2 {
+  font-size: 15px;
+  color: #202020;
+  font-family: "PT Sans Narrow", sans-serif;
+  padding-top: 49px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031108}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-header #pager2 a {
+  color: #202020;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031111}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-header #pager2 span {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031115}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-header h3 {
+  font: bold italic 20px/12px "PT Serif", serif;
+  color: #3c3c3c;
+  padding: 16px 0 44px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031122}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-clip {
+  width: 945px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031127}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item {
+  /*width: 305px;*/
+  /*height: 300px;*/
+  padding: 0 5px;
+  word-wrap: bread-word;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031132}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item a {
+  display: block;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031137}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item h4 {
+  font-size: 20px;
+  color: #202020;
+  padding-bottom: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031145}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item img {
+  width: 305px;
+  height: 195px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031149}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item h5 {
+  font-size: 15px;
+  color: #202020;
+  font-family: "PT Sans Narrow", sans-serif;
+  line-height: 20px;
+  padding-top: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031157}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-navigation {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031160}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-prev, body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-next {
+  display: block;
+  position: absolute;
+  top: 122px;
+  width: 12px;
+  height: 22px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031167}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-prev {
+  background: url("../images/our_work/carousel_prev.png") no-repeat center center;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031171}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-next {
+  background: url("../images/our_work/carousel_next.png") no-repeat center center;
+  right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031175}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-prev-disabled {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031178}}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-next-disabled {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031186}}
+body.node-type-our-work #footer {
+  position: relative;
+  z-index: 50;
+  top: 660px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031192}}
+body.node-type-our-work #superbox-overlay {
+  background: #cecece;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031196}}
+body.node-type-our-work #superbox-container #superbox {
+  padding: 33px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031200}}
+body.node-type-our-work #superbox-container .loading {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  text-indent: -9999px;
+  background: url("../images/superbox/loader.gif") no-repeat 0 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031207}}
+body.node-type-our-work #superbox .close {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031209}}
+body.node-type-our-work #superbox .close a {
+  display: block;
+  width: 26px;
+  height: 25px;
+  float: right;
+  background: url("../images/superbox/cross.png") no-repeat center center;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031217}}
+body.node-type-our-work #superbox .close a span {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031222}}
+body.node-type-our-work #superbox #superbox-innerbox {
+  padding: 38px 0 4px;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031225}}
+body.node-type-our-work #superbox #superbox-innerbox h3 {
+  position: absolute;
+  top: -21px;
+  left: 0;
+  color: #202020;
+  font-size: 22px;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031233}}
+body.node-type-our-work #superbox #superbox-innerbox h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  display: block;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  text-indent: 13px;
+  overflow: hidden;
+  line-height: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031248}}
+body.node-type-our-work #superbox .nextprev a {
+  float: left;
+  margin-right: 5px;
+  padding: 0 5px;
+  line-height: 20px;
+  background: #333;
+  cursor: pointer;
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031257}}
+body.node-type-our-work #superbox .nextprev .disabled {
+  background: #ccc;
+  cursor: default;
+}
+
+/*
+  * Why SR page
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031272}}
+body.section-why-sr #page-title a {
+  color: #919191;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031274}}
+body.section-why-sr #page-title a:hover {
+  color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031281}}
+body.about-us #content > section, body.our-people #content > section {
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031284}}
+body.about-us h3.headline, body.our-people h3.headline {
+  text-align: center;
+  font: bold italic 25px/35px "PT Serif", serif;
+  padding-bottom: 35px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031289}}
+body.about-us article, body.our-people article {
+  font: normal 16px/25px "PT Sans", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031293}}
+body.about-us #ourfocus h4, body.our-people #ourfocus h4 {
+  font-size: 22px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031296}}
+body.about-us #ourfocus span, body.our-people #ourfocus span {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031299}}
+body.about-us #ourfocus sup, body.our-people #ourfocus sup {
+  font-size: 10px;
+  vertical-align: super;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031309}}
+body.about-us article p {
+  padding-bottom: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031314}}
+body.about-us #ourfocus > div {
+  width: 668px;
+  margin: 18px auto 35px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031320}}
+body.about-us #expertise > div {
+  width: 960px;
+  margin: 18px auto 35px;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031324}}
+body.about-us #expertise > div > article {
+  width: 290px;
+  float: left;
+  margin-left: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031328}}
+body.about-us #expertise > div > article:first-child {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031331}}
+body.about-us #expertise > div > article h4 {
+  font: bold italic 25px/25px "PT Serif", serif;
+  padding-bottom: 28px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031335}}
+body.about-us #expertise > div > article p {
+  font: normal 15px/25px "PT Sans", sans-serif;
+  padding-bottom: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031339}}
+body.about-us #expertise > div > article > ul {
+  padding-top: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031341}}
+body.about-us #expertise > div > article > ul a {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031344}}
+body.about-us #expertise > div > article > ul .accordion {
+  /*            &.selected {
+                ul {
+                  padding-bottom: 10px;
+                  span {
+                    height: auto;
+                    padding-bottom: 13px;
+                  }
+                }
+              }*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031345}}
+body.about-us #expertise > div > article > ul .accordion > a {
+  height: 40px;
+  font: bold 16px/40px "PT Sans", sans-serif;
+  color: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031350}}
+body.about-us #expertise > div > article > ul .accordion ul {
+  padding: 0;
+  overflow: hidden;
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031354}}
+body.about-us #expertise > div > article > ul .accordion ul a, body.about-us #expertise > div > article > ul .accordion ul span {
+  font: normal 15px/18px "PT Sans", sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031378}}
+body.our-people .headline {
+  width: 640px;
+  display: block;
+  padding-top: 38px;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031384}}
+body.our-people #outmanagement > div {
+  width: 945px;
+  margin: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031387}}
+body.our-people #outmanagement > div div.view-content div.first article {
+  border-top: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031390}}
+body.our-people #outmanagement > div article {
+  padding: 30px 0 35px;
+  border-top: 1px solid #d7d7d7;
+  width: 100%;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031395}}
+body.our-people #outmanagement > div article .left {
+  float: left;
+  background: #f2f2f2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031398}}
+body.our-people #outmanagement > div article .left img {
+  width: 210px;
+  height: 210px;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031404}}
+body.our-people #outmanagement > div article .right {
+  padding-left: 30px;
+  font-size: 16px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031409}}
+body.our-people #outmanagement > div article .right h3 {
+  font: bold italic 20px/25px "PT Serif", serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031412}}
+body.our-people #outmanagement > div article .right a {
+  font-weight: bold;
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031415}}
+body.our-people #outmanagement > div article .right a:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031419}}
+body.our-people #outmanagement > div article .right p {
+  padding-top: 25px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031425}}
+body.our-people #ourteam {
+  background: #ececec;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031427}}
+body.our-people #ourteam > div {
+  width: 960px;
+  margin: 0 auto;
+  padding: 40px 0 52px;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031432}}
+body.our-people #ourteam > div .view-content > div {
+  float: left;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  background: transparent;
+  /*        div.item-container .thumb-hover {
+    background: black;
+    top: 195px;
+    }
+    div.item-container:hover .thumb-hover {
+    opacity: 0.7;
+  }*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031438}}
+body.our-people #ourteam > div .view-content > div .item-container {
+  display: block;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  word-wrap: break-word;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031444}}
+body.our-people #ourteam > div .view-content > div .item-container .thumb-hover {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  background-color: rgba(245, 141, 58, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccf58d3a', endColorstr='#ccf58d3a');
+  position: absolute;
+  left: 0;
+  top: 240px;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031456}}
+body.our-people #ourteam > div .view-content > div .item-container .thumb-hover h3 {
+  margin-top: 100px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031463}}
+body.our-people #ourteam > div .view-content > div .item-container .thumb-hover h4 {
+  padding-top: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031469}}
+body.our-people #ourteam > div .view-content > div .item-container:hover .thumb-hover {
+  top: 0;
+  background-color: rgba(245, 141, 58, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccf58d3a', endColorstr='#ccf58d3a');
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031474}}
+body.our-people #ourteam > div .view-content > div .item-container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031492}}
+body.our-people #superbox-overlay {
+  background: #cecece;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031496}}
+body.our-people #superbox-container #superbox {
+  padding: 33px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031500}}
+body.our-people #superbox-container .loading {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  text-indent: -9999px;
+  background: url("../images/superbox/loader.gif") no-repeat 0 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031507}}
+body.our-people #superbox .close {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031509}}
+body.our-people #superbox .close a {
+  display: block;
+  width: 26px;
+  height: 25px;
+  float: right;
+  background: url("../images/superbox/cross.png") no-repeat center center;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031517}}
+body.our-people #superbox .close a span {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031522}}
+body.our-people #superbox #superbox-innerbox {
+  padding: 38px 0 4px;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031525}}
+body.our-people #superbox #superbox-innerbox h3 {
+  position: absolute;
+  top: -21px;
+  left: 0;
+  color: #202020;
+  font-size: 22px;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031533}}
+body.our-people #superbox #superbox-innerbox h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  display: block;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  text-indent: 13px;
+  overflow: hidden;
+  line-height: 40px;
+  text-align: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031549}}
+body.our-people #superbox .nextprev a {
+  float: left;
+  margin-right: 5px;
+  padding: 0 5px;
+  line-height: 20px;
+  background: #333;
+  cursor: pointer;
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031558}}
+body.our-people #superbox .nextprev .disabled {
+  background: #ccc;
+  cursor: default;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031568}}
+body.thought-leadership #footer {
+  position: relative;
+  z-index: 3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031572}}
+body.thought-leadership #content {
+  width: 945px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003475}}
+body.thought-leadership #content > * {
+  background: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003478}}
+body.thought-leadership #content section.region-sidebar {
+  position: fixed;
+  z-index: 2;
+  top: 62px;
+  width: 290px;
+  height: 1000px;
+  background: #ececec url("../images/sidebar-scrollbar-bg.png") repeat-y right top;
+  padding-top: 62px;
+  padding-right: 12px;
+  padding-left: 12px;
+  overflow: hidden;
+  /*@include box-sizing(content-box);*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003490}}
+body.thought-leadership #content section.region-sidebar .accordion {
+  padding-bottom: 30px;
+  /*      &.selected {
+          &>ul {
+            padding-top: 14px;
+            a {
+              overflow: visible;
+              height: 25px;
+            }
+          }
+        }*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003492}}
+body.thought-leadership #content section.region-sidebar .accordion > a {
+  font: italic 20px/20px "PT Serif", serif;
+  color: #3c3c3c;
+  padding-bottom: 20px;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003498}}
+body.thought-leadership #content section.region-sidebar .accordion > ul {
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003500}}
+body.thought-leadership #content section.region-sidebar .accordion > ul a, body.thought-leadership #content section.region-sidebar .accordion > ul span {
+  font: normal 15px/18px "PT Sans Narrow", sans-serif;
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003503}}
+body.thought-leadership #content section.region-sidebar .accordion > ul a.current, body.thought-leadership #content section.region-sidebar .accordion > ul span.current {
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031577}}
+body.thought-leadership #content > .view-thought-leadership {
+  float: right;
+  width: 655px;
+  padding-top: 62px;
+  padding-left: 87px;
+  min-height: 750px;
+  height: auto !important;
+  height: 750px;
+  position: relative;
+  z-index: 2;
+  -webkit-box-shadow: #cccccc 5px 0px 5px inset;
+  -moz-box-shadow: #cccccc 5px 0px 5px inset;
+  box-shadow: #cccccc 5px 0px 5px inset;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031588}}
+body.thought-leadership #content > .view-thought-leadership .view-content {
+  padding-bottom: 35px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031590}}
+body.thought-leadership #content > .view-thought-leadership .view-content > div {
+  padding-bottom: 27px;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031594}}
+body.thought-leadership #content > .view-thought-leadership .view-content > div h4 {
+  font-size: 15px;
+  padding-bottom: 18px;
+  color: #7d7d7d;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031599}}
+body.thought-leadership #content > .view-thought-leadership .view-content > div h3 {
+  font: bold italic 20px/20px "PT Serif", serif;
+  color: #3c3c3c;
+  padding-bottom: 16px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031604}}
+body.thought-leadership #content > .view-thought-leadership .view-content > div a {
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031606}}
+body.thought-leadership #content > .view-thought-leadership .view-content > div a:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031610}}
+body.thought-leadership #content > .view-thought-leadership .view-content > div p {
+  font-size: 16px;
+  line-height: 25px;
+  padding-bottom: 16px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031615}}
+body.thought-leadership #content > .view-thought-leadership .view-content > div > a {
+  font: bold 16px/16px "PT Sans Narrow", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031618}}
+body.thought-leadership #content > .view-thought-leadership .view-content > div:last-child {
+  margin-bottom: 0;
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031624}}
+body.thought-leadership #content > .view-thought-leadership .pager {
+  overflow: hidden;
+  background: url("../images/pager-line.png") repeat-x left top;
+  position: relative;
+  padding-bottom: 90px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031629}}
+body.thought-leadership #content > .view-thought-leadership .pager li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031633}}
+body.thought-leadership #content > .view-thought-leadership .pager li a {
+  display: block;
+  color: #bebebe;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031637}}
+body.thought-leadership #content > .view-thought-leadership .pager li a, body.thought-leadership #content > .view-thought-leadership .pager li.pager-current {
+  height: 40px;
+  font: bold 16px/40px "PT Sans Narrow", sans-serif;
+  position: relative;
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031643}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-item a, body.thought-leadership #content > .view-thought-leadership .pager li.pager-current {
+  width: 26px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031646}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-item:hover {
+  border-top: 1px solid #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031648}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-item:hover a {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031652}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-current {
+  color: #3c3c3c;
+  border-top: 1px solid #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031656}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-first {
+  position: absolute;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031659}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-first a {
+  padding: 0 60px 0 17px;
+  background: url("../images/pager-prev.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031664}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-previous {
+  position: absolute;
+  left: 144px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031667}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-previous a {
+  text-indent: -9999px;
+  width: 7px;
+  background: url("../images/pager-prev.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031673}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-next {
+  position: absolute;
+  right: 144px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031676}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-next a {
+  text-indent: -9999px;
+  width: 7px;
+  background: url("../images/pager-next.png") no-repeat right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031682}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-last {
+  position: absolute;
+  right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031685}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-last a {
+  padding: 0 17px 0 0;
+  background: url("../images/pager-next.png") no-repeat right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031690}}
+body.thought-leadership #content > .view-thought-leadership .pager li.pager-ellipsis {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031700}}
+body.node-type-thought-leadership section.region-sidebar {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031703}}
+body.node-type-thought-leadership #banner {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031709}}
+body.node-type-thought-leadership #maincontent {
+  position: relative;
+  z-index: 13;
+  padding-top: 420px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031713}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap {
+  background: white;
+  -webkit-box-shadow: #888888 0px -3px 5px;
+  -moz-box-shadow: #888888 0px -3px 5px;
+  box-shadow: #888888 0px -3px 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031716}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap > div, body.node-type-thought-leadership #maincontent #maincontent-wrap #title-wrap {
+  width: 945px;
+  margin: 0 auto;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031721}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #title {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031727}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #title h2 {
+  height: 60px;
+  font: bold 20px/60px "PT Serif", serif;
+  color: #888888;
+  display: block;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031734}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager {
+  float: right;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031737}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager a, body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager span {
+  display: block;
+  float: left;
+  height: 60px;
+  width: 60px;
+  border-left: 1px solid #cecece;
+  border-right: 1px solid #cecece;
+  text-indent: -9999px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031745}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager a#prev, body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager span#prev {
+  background: url("../images/our_work/pager_prev.png") no-repeat center center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031748}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager a#next, body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager span#next {
+  background: url("../images/our_work/pager_next.png") no-repeat center center;
+  border-left: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031753}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager span {
+  opacity: 0.5;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031756}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager + a {
+  float: right;
+  display: block;
+  height: 60px;
+  width: 204px;
+  text-align: center;
+  font: bold italic 17px/60px "PT Sans", sans-serif;
+  color: #888888;
+  border-left: 1px solid #cecece;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031765}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager + a:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031771}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #heading {
+  padding: 30px 0 30px 195px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031773}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #heading #date_author {
+  padding-bottom: 14px;
+  color: #7d7d7d;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031776}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #heading #date_author a {
+  font: normal 15px/15px "PT Sans", sans-serif;
+  color: #7d7d7d;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031781}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #heading #subject {
+  font: bold italic 30px/30px "PT Serif", serif;
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031786}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container {
+  overflow: hidden;
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031789}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section {
+  float: left;
+  border-top: 1px solid #ededed;
+  padding-top: 38px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031793}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#left {
+  width: 195px;
+  padding-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031796}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#left h4, body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#left a {
+  font: bold 16px/25px "PT Sans Narrow", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031799}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#left h4 {
+  color: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031802}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#left a {
+  color: #bebebe;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031806}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right {
+  width: 750px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031808}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right article#body {
+  font: normal 16px/25px "PT Sans", sans-serif;
+  padding-bottom: 53px;
+  border-bottom: 1px solid #ededed;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031813}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right article#sr {
+  padding: 20px 0 30px;
+  border-bottom: 1px solid #ededed;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031816}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right article#sr h3 {
+  font: bold 16px/25px "PT Sans", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031819}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right article#sr h4 {
+  font: normal 16px/25px "PT Sans", sans-serif;
+  padding-bottom: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031823}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right article#sr p {
+  font: normal 14px/18px "PT Sans", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031827}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right #back {
+  padding: 18px 0 50px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031829}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right #back a {
+  padding-left: 18px;
+  font: bold 16px/16px "PT Sans Narrow", sans-serif;
+  color: #bebebe;
+  background: url("../images/why_sr/thought_leadership/back-arrow.png") no-repeat left 6px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031834}}
+body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right #back a:hover {
+  color: #f58d3a;
+  background-image: url("../images/why_sr/thought_leadership/back-arrow-hover.png");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031845}}
+body.node-type-thought-leadership #footer {
+  position: relative;
+  z-index: 50;
+}
+
+/*
+  * Culture & careers page
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031860}}
+body.culture-careers #slideshow-text {
+  margin: -452px auto 0;
+  width: 980px;
+  height: 452px;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031865}}
+body.culture-careers #slideshow-text div {
+  position: absolute;
+  top: 72px;
+  left: 35px;
+  background-color: rgba(255, 255, 255, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccffffff', endColorstr='#ccffffff');
+  width: 347px;
+  height: 300px;
+  padding: 50px 25px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031874}}
+body.culture-careers #slideshow-text div h3 {
+  font: normal 40px/42px "PT Sans Narrow", sans-serif;
+  color: #3c3c3c;
+  margin-bottom: 35px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031878}}
+body.culture-careers #slideshow-text div h3 span {
+  color: #f58d3a;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031883}}
+body.culture-careers #slideshow-text div p {
+  font: italic 16px/25px "PT Serif", serif;
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031889}}
+body.culture-careers #block-sr-culturecareers-slideshow {
+  position: fixed;
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031893}}
+body.culture-careers #maincontent {
+  background: white;
+  position: relative;
+  top: 452px;
+  z-index: 13;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031898}}
+body.culture-careers #maincontent #upper {
+  margin: 0 auto 50px;
+  width: 945px;
+  font: 16px/25px "PT Sans", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031902}}
+body.culture-careers #maincontent #upper h3 {
+  font: italic bold 25px/35px "PT Serif", serif;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+  width: 650px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031910}}
+body.culture-careers #maincontent #upper > div {
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031912}}
+body.culture-careers #maincontent #upper > div article {
+  float: left;
+  padding-right: 80px;
+  width: 675px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031917}}
+body.culture-careers #maincontent #upper > div > div {
+  float: left;
+  width: 270px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031920}}
+body.culture-careers #maincontent #upper > div > div h4 {
+  font: italic bold 20px/30px "PT Serif", serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031924}}
+body.culture-careers #maincontent #upper > div > div li:before {
+  color: #F58D3A;
+  content: "罈 ";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031928}}
+body.culture-careers #maincontent #upper > div > div li a {
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031930}}
+body.culture-careers #maincontent #upper > div > div li a:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031938}}
+body.culture-careers #maincontent #culture {
+  background: #ececec;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031940}}
+body.culture-careers #maincontent #culture #culture-container {
+  width: 945px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031944}}
+body.culture-careers #maincontent #culture #culture-container > div {
+  float: left;
+  width: 305px;
+  margin-left: 15px;
+  padding-bottom: 35px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031949}}
+body.culture-careers #maincontent #culture #culture-container > div:first-child {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031952}}
+body.culture-careers #maincontent #culture #culture-container > div .items {
+  padding: 40px 0 35px;
+  border-bottom: 1px solid #a4a4a4;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031958}}
+body.culture-careers #maincontent #culture #culture-container > div .location-items img, body.culture-careers #maincontent #culture #culture-container > div .event-items img {
+  margin-bottom: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031961}}
+body.culture-careers #maincontent #culture #culture-container > div .location-items h3, body.culture-careers #maincontent #culture #culture-container > div .event-items h3 {
+  font: normal 20px/25px "PT Sans Narrow", sans-serif;
+  color: #202020;
+  padding-bottom: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031966}}
+body.culture-careers #maincontent #culture #culture-container > div .location-items p, body.culture-careers #maincontent #culture #culture-container > div .event-items p {
+  font: italic 14px/22px "PT Serif", serif;
+  color: #5c5c5c;
+  width: 270px;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031975}}
+body.culture-careers #maincontent #culture #culture-container > div .people-items p {
+  padding-top: 17px;
+  padding-left: 75px;
+  background: url("../images/culture_careers/quote.png") no-repeat 28px 20px;
+  width: 300px;
+  text-align: left;
+  font: italic 16px/22px "PT Serif", serif;
+  padding-bottom: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031984}}
+body.culture-careers #maincontent #culture #culture-container > div .people-items h3 {
+  font: normal 14px/22px "PT Sans Narrow", sans-serif;
+  color: #5c5c5c;
+  text-align: left;
+  padding-left: 75px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031992}}
+body.culture-careers #maincontent #culture #culture-container > div .event-items img {
+  margin-bottom: 17px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000031998}}
+body.culture-careers #maincontent #culture #event_lightbox {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032003}}
+body.culture-careers #maincontent #careers h3 {
+  font: italic bold 25px/35px "PT Serif", serif;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  text-align: center;
+  width: 650px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032011}}
+body.culture-careers #maincontent #careers #careers-container {
+  width: 945px;
+  margin: 0 auto;
+  border-top: 1px solid #ededed;
+  padding: 30px 0 63px;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032017}}
+body.culture-careers #maincontent #careers #careers-container ul {
+  float: left;
+  width: 205px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032020}}
+body.culture-careers #maincontent #careers #careers-container ul a {
+  font: bold 16px/25px "PT Sans Narrow", sans-serif;
+  color: #bebebe;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032023}}
+body.culture-careers #maincontent #careers #careers-container ul a.current {
+  color: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032028}}
+body.culture-careers #maincontent #careers #careers-container #careers-content {
+  float: left;
+  width: 740px;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032032}}
+body.culture-careers #maincontent #careers #careers-container #careers-content div {
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032033}}
+body.culture-careers #maincontent #careers #careers-container #careers-content div.active {
+  position: static;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032040}}
+body.culture-careers #maincontent #careers #careers-container #careers-content div p {
+  font: normal 16px/25px "PT Sans", sans-serif;
+  color: #3c3c3c;
+  padding-bottom: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032045}}
+body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-download {
+  font: bold 16px/25px "PT Sans Narrow", sans-serif;
+  color: #3c3c3c;
+  display: block;
+  margin-bottom: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032051}}
+body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-apply {
+  display: block;
+  background: black;
+  width: 305px;
+  height: 46px;
+  font: bold italic 17px/46px "PT Sans", sans-serif;
+  color: white;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032065}}
+body.culture-careers #footer {
+  position: relative;
+  top: 452px;
+}
+
+/*
+  * Clients page
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032078}}
+body.clients .error {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032081}}
+body.clients.listview-filter {
+  margin-bottom: -1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032084}}
+body.clients #block-sr-clients-options {
+  width: 945px;
+  margin: 0 auto 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032087}}
+body.clients #block-sr-clients-options .isotope-options {
+  background: transparent;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  margin-top: 41px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032092}}
+body.clients #block-sr-clients-options .isotope-options h3 {
+  font-size: 15px;
+  color: #232323;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 0 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032099}}
+body.clients #block-sr-clients-options .isotope-options #filter {
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032102}}
+body.clients #block-sr-clients-options .isotope-options #filter li {
+  display: inline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032105}}
+body.clients #block-sr-clients-options .isotope-options #filter a, body.clients #block-sr-clients-options .isotope-options #filter span {
+  line-height: 22px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032109}}
+body.clients #block-sr-clients-options .isotope-options #relayout {
+  padding: 22px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032112}}
+body.clients #block-sr-clients-options .isotope-options a {
+  font-size: 15px;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #6c6c6c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032116}}
+body.clients #block-sr-clients-options .isotope-options a:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032119}}
+body.clients #block-sr-clients-options .isotope-options a.selected {
+  color: black;
+  font-weight: bold;
+  cursor: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032125}}
+body.clients #block-sr-clients-options .isotope-options span {
+  color: #6c6c6c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032130}}
+body.clients #isotope-container {
+  margin: 0 auto;
+  padding-bottom: 20px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032135}}
+body.clients #isotope-container.tileview {
+  width: 960px;
+  margin-top: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032138}}
+body.clients #isotope-container.tileview .isotope-element {
+  width: 177px;
+  height: 177px;
+  /*margin: 7px 7px 8px 8px;*/
+  margin: 6px;
+  background: white;
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032145}}
+body.clients #isotope-container.tileview .isotope-element .item-container {
+  display: block;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032151}}
+body.clients #isotope-container.tileview .isotope-element .item-container .thumb-hover {
+  /*            @include transition-property(all);
+              @include transition-duration(0.5s);*/
+  background-color: rgba(245, 141, 58, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccf58d3a', endColorstr='#ccf58d3a');
+  position: absolute;
+  left: 0;
+  top: 172px;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032163}}
+body.clients #isotope-container.tileview .isotope-element .item-container .thumb-hover h3 {
+  padding-top: 80px;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032170}}
+body.clients #isotope-container.tileview .isotope-element .item-container .thumb-hover h4 {
+  text-decoration: underline;
+  padding-top: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032179}}
+body.clients #isotope-container.tileview .isotope-element .item-container:hover .thumb-hover {
+  top: 0;
+  background-color: rgba(245, 141, 58, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccf58d3a', endColorstr='#ccf58d3a');
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032184}}
+body.clients #isotope-container.tileview .isotope-element .item-container img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032191}}
+body.clients #isotope-container.tileview .isotope-element div.item-container .thumb-hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  background: black;
+  top: 195px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032196}}
+body.clients #isotope-container.tileview .isotope-element div.item-container:hover .thumb-hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#cc000000', endColorstr='#cc000000');
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032202}}
+body.clients #isotope-container.listview {
+  width: 945px;
+  padding-top: 0;
+  margin-top: -1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032206}}
+body.clients #isotope-container.listview .isotope-element {
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  background: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032211}}
+body.clients #isotope-container.listview .isotope-element .item-container {
+  width: 945px !important;
+  height: 100%;
+  margin: 0 auto;
+  border-top: 1px solid #efefef;
+  background: transparent;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032218}}
+body.clients #isotope-container.listview .isotope-element .item-container:hover {
+  background: #fef9f5;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032223}}
+body.clients #isotope-container.listview .isotope-element a.item-container h3 {
+  background: url("../images/clients/arrow.png") no-repeat right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032227}}
+body.clients #isotope-container.listview .isotope-element .thumb-hover {
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032229}}
+body.clients #isotope-container.listview .isotope-element .thumb-hover h3 {
+  font: italic 20px/60px "PT Serif", serif;
+  color: #3c3c3c;
+  display: block;
+  float: left;
+  padding: 0 28px 0 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032236}}
+body.clients #isotope-container.listview .isotope-element .thumb-hover h4 {
+  display: none;
+  font: italic 14px/60px "PT Sans", sans-serif;
+  color: #919191;
+  float: left;
+  padding-left: 22px;
+  text-decoration: underline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032246}}
+body.clients #isotope-container.listview .isotope-element:hover h4 {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032250}}
+body.clients #isotope-container.listview .isotope-element img {
+  opacity: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032253}}
+body.clients #isotope-container.listview .isotope-element:last-child .item-container {
+  border-bottom: 1px solid #efefef;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032259}}
+body.clients .view-clients-list > .item-list {
+  margin: 5px auto 0;
+  /*border-top: 1px solid #ededed;*/
+  width: 945px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032264}}
+body.clients #loadmore {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  display: block;
+  background: #222222;
+  width: 305px;
+  margin: 45px auto 36px;
+  height: 45px;
+  color: white;
+  text-align: center;
+  font: italic bold 17px/45px "PT Sans", sans-serif;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032276}}
+body.clients #loadmore:hover {
+  background: #6c6c6c;
+}
+
+/*
+  * News page
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032289}}
+body.news #footer, body.node-type-news #footer {
+  position: relative;
+  z-index: 3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032293}}
+body.news #content, body.node-type-news #content {
+  width: 945px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003475}}
+body.news #content > *, body.node-type-news #content > * {
+  background: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003478}}
+body.news #content section.region-sidebar, body.node-type-news #content section.region-sidebar {
+  position: fixed;
+  z-index: 2;
+  top: 62px;
+  width: 290px;
+  height: 1000px;
+  background: #ececec url("../images/sidebar-scrollbar-bg.png") repeat-y right top;
+  padding-top: 62px;
+  padding-right: 12px;
+  padding-left: 12px;
+  overflow: hidden;
+  /*@include box-sizing(content-box);*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003490}}
+body.news #content section.region-sidebar .accordion, body.node-type-news #content section.region-sidebar .accordion {
+  padding-bottom: 30px;
+  /*      &.selected {
+          &>ul {
+            padding-top: 14px;
+            a {
+              overflow: visible;
+              height: 25px;
+            }
+          }
+        }*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003492}}
+body.news #content section.region-sidebar .accordion > a, body.node-type-news #content section.region-sidebar .accordion > a {
+  font: italic 20px/20px "PT Serif", serif;
+  color: #3c3c3c;
+  padding-bottom: 20px;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003498}}
+body.news #content section.region-sidebar .accordion > ul, body.node-type-news #content section.region-sidebar .accordion > ul {
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003500}}
+body.news #content section.region-sidebar .accordion > ul a, body.news #content section.region-sidebar .accordion > ul span, body.node-type-news #content section.region-sidebar .accordion > ul a, body.node-type-news #content section.region-sidebar .accordion > ul span {
+  font: normal 15px/18px "PT Sans Narrow", sans-serif;
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\00003503}}
+body.news #content section.region-sidebar .accordion > ul a.current, body.news #content section.region-sidebar .accordion > ul span.current, body.node-type-news #content section.region-sidebar .accordion > ul a.current, body.node-type-news #content section.region-sidebar .accordion > ul span.current {
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032299}}
+body.news #content #block-views-news-content-page, body.node-type-news #content #block-views-news-content-page {
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032302}}
+body.news #content .view-news, body.node-type-news #content .view-news {
+  float: right;
+  width: 655px;
+  padding-top: 62px;
+  position: relative;
+  padding-left: 87px;
+  z-index: 2;
+  background: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032310}}
+body.news #content .view-news .view-content, body.node-type-news #content .view-news .view-content {
+  padding-bottom: 35px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032312}}
+body.news #content .view-news .view-content > div, body.node-type-news #content .view-news .view-content > div {
+  padding-bottom: 27px;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032316}}
+body.news #content .view-news .view-content > div h4, body.node-type-news #content .view-news .view-content > div h4 {
+  font-size: 15px;
+  padding-bottom: 18px;
+  color: #7d7d7d;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032321}}
+body.news #content .view-news .view-content > div h3, body.node-type-news #content .view-news .view-content > div h3 {
+  font: bold italic 20px/20px "PT Serif", serif;
+  color: #3c3c3c;
+  padding-bottom: 16px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032326}}
+body.news #content .view-news .view-content > div a, body.node-type-news #content .view-news .view-content > div a {
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032328}}
+body.news #content .view-news .view-content > div a:hover, body.node-type-news #content .view-news .view-content > div a:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032332}}
+body.news #content .view-news .view-content > div p, body.node-type-news #content .view-news .view-content > div p {
+  font-size: 16px;
+  line-height: 25px;
+  padding-bottom: 16px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032337}}
+body.news #content .view-news .view-content > div > a, body.node-type-news #content .view-news .view-content > div > a {
+  font: bold 16px/16px "PT Sans Narrow", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032340}}
+body.news #content .view-news .view-content > div:last-child, body.node-type-news #content .view-news .view-content > div:last-child {
+  margin-bottom: 0;
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032346}}
+body.news #content .view-news .pager, body.node-type-news #content .view-news .pager {
+  overflow: hidden;
+  background: url("../images/pager-line.png") repeat-x left top;
+  position: relative;
+  padding-bottom: 90px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032351}}
+body.news #content .view-news .pager li, body.node-type-news #content .view-news .pager li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032355}}
+body.news #content .view-news .pager li a, body.node-type-news #content .view-news .pager li a {
+  display: block;
+  color: #bebebe;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032359}}
+body.news #content .view-news .pager li a, body.news #content .view-news .pager li.pager-current, body.node-type-news #content .view-news .pager li a, body.node-type-news #content .view-news .pager li.pager-current {
+  height: 40px;
+  font: bold 16px/40px "PT Sans Narrow", sans-serif;
+  position: relative;
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032365}}
+body.news #content .view-news .pager li.pager-item a, body.news #content .view-news .pager li.pager-current, body.node-type-news #content .view-news .pager li.pager-item a, body.node-type-news #content .view-news .pager li.pager-current {
+  width: 26px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032368}}
+body.news #content .view-news .pager li.pager-item:hover, body.node-type-news #content .view-news .pager li.pager-item:hover {
+  border-top: 1px solid #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032370}}
+body.news #content .view-news .pager li.pager-item:hover a, body.node-type-news #content .view-news .pager li.pager-item:hover a {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032374}}
+body.news #content .view-news .pager li.pager-current, body.node-type-news #content .view-news .pager li.pager-current {
+  color: #3c3c3c;
+  border-top: 1px solid #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032378}}
+body.news #content .view-news .pager li.pager-first, body.node-type-news #content .view-news .pager li.pager-first {
+  position: absolute;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032381}}
+body.news #content .view-news .pager li.pager-first a, body.node-type-news #content .view-news .pager li.pager-first a {
+  padding: 0 60px 0 17px;
+  background: url("../images/pager-prev.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032386}}
+body.news #content .view-news .pager li.pager-previous, body.node-type-news #content .view-news .pager li.pager-previous {
+  position: absolute;
+  left: 144px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032389}}
+body.news #content .view-news .pager li.pager-previous a, body.node-type-news #content .view-news .pager li.pager-previous a {
+  text-indent: -9999px;
+  width: 7px;
+  background: url("../images/pager-prev.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032395}}
+body.news #content .view-news .pager li.pager-next, body.node-type-news #content .view-news .pager li.pager-next {
+  position: absolute;
+  right: 144px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032398}}
+body.news #content .view-news .pager li.pager-next a, body.node-type-news #content .view-news .pager li.pager-next a {
+  text-indent: -9999px;
+  width: 7px;
+  background: url("../images/pager-next.png") no-repeat right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032404}}
+body.news #content .view-news .pager li.pager-last, body.node-type-news #content .view-news .pager li.pager-last {
+  position: absolute;
+  right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032407}}
+body.news #content .view-news .pager li.pager-last a, body.node-type-news #content .view-news .pager li.pager-last a {
+  padding: 0 17px 0 0;
+  background: url("../images/pager-next.png") no-repeat right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032412}}
+body.news #content .view-news .pager li.pager-ellipsis, body.node-type-news #content .view-news .pager li.pager-ellipsis {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032417}}
+body.news #content .view-news #node-pager, body.node-type-news #content .view-news #node-pager {
+  overflow: hidden;
+  border-top: 1px solid #ededed;
+  position: relative;
+  padding-bottom: 90px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032422}}
+body.news #content .view-news #node-pager a, body.news #content .view-news #node-pager span, body.node-type-news #content .view-news #node-pager a, body.node-type-news #content .view-news #node-pager span {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  color: #bebebe;
+  height: 40px;
+  font: bold 16px/40px "PT Sans Narrow", sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032429}}
+body.news #content .view-news #node-pager a:hover, body.news #content .view-news #node-pager span:hover, body.node-type-news #content .view-news #node-pager a:hover, body.node-type-news #content .view-news #node-pager span:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032432}}
+body.news #content .view-news #node-pager a#back, body.news #content .view-news #node-pager span#back, body.node-type-news #content .view-news #node-pager a#back, body.node-type-news #content .view-news #node-pager span#back {
+  padding-left: 15px;
+  background: url("../images/pager-prev.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032435}}
+body.news #content .view-news #node-pager a#back:hover, body.news #content .view-news #node-pager span#back:hover, body.node-type-news #content .view-news #node-pager a#back:hover, body.node-type-news #content .view-news #node-pager span#back:hover {
+  background: url("../images/pager-prev-hover.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032439}}
+body.news #content .view-news #node-pager a#prev, body.news #content .view-news #node-pager span#prev, body.node-type-news #content .view-news #node-pager a#prev, body.node-type-news #content .view-news #node-pager span#prev {
+  position: absolute;
+  right: 86px;
+  padding-left: 15px;
+  background: url("../images/pager-prev.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032444}}
+body.news #content .view-news #node-pager a#prev:hover, body.news #content .view-news #node-pager span#prev:hover, body.node-type-news #content .view-news #node-pager a#prev:hover, body.node-type-news #content .view-news #node-pager span#prev:hover {
+  background: url("../images/pager-prev-hover.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032448}}
+body.news #content .view-news #node-pager a#next, body.news #content .view-news #node-pager span#next, body.node-type-news #content .view-news #node-pager a#next, body.node-type-news #content .view-news #node-pager span#next {
+  position: absolute;
+  right: 0;
+  padding-right: 15px;
+  background: url("../images/pager-next.png") no-repeat right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032453}}
+body.news #content .view-news #node-pager a#next:hover, body.news #content .view-news #node-pager span#next:hover, body.node-type-news #content .view-news #node-pager a#next:hover, body.node-type-news #content .view-news #node-pager span#next:hover {
+  background: url("../images/pager-next-hover.png") no-repeat right center;
+}
+
+/*
+  * Contact page
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032469}}
+body.section-contact {
+  background: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032471}}
+body.section-contact #content {
+  background: #888;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032475}}
+body.section-contact #footer {
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032478}}
+body.section-contact #block-quicktabs-contact-tabs {
+  width: 850px;
+  height: 550px;
+  background: white;
+  margin: 0 auto;
+  z-index: 5;
+  top: 150px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032485}}
+body.section-contact #block-quicktabs-contact-tabs .quicktabs-tabs {
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032487}}
+body.section-contact #block-quicktabs-contact-tabs .quicktabs-tabs li {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032489}}
+body.section-contact #block-quicktabs-contact-tabs .quicktabs-tabs li a {
+  border-left: 1px solid #414141;
+  display: block;
+  background: #222222;
+  width: 170px;
+  height: 59px;
+  font: bold 14px/59px "PT Sans Narrow", sans-serif;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032500}}
+body.section-contact #block-quicktabs-contact-tabs .quicktabs-tabs li a:hover {
+  background: #5f5f5f;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032504}}
+body.section-contact #block-quicktabs-contact-tabs .quicktabs-tabs li:first-child a {
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032507}}
+body.section-contact #block-quicktabs-contact-tabs .quicktabs-tabs li.active a {
+  background: white;
+  color: #222222;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032513}}
+body.section-contact #block-quicktabs-contact-tabs #loadmore {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032517}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-header {
+  padding: 29px 0 27px;
+  text-align: center;
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032521}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-header h3 {
+  font: bold italic 20px/20px "PT Serif", serif;
+  /*padding-bottom: 20px;*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032525}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-header li {
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032528}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-header li a {
+  color: #3c3c3c;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032534}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content {
+  overflow: hidden;
+  width: 774px;
+  margin: 0 auto;
+  border-top: 1px solid #ededed;
+  padding-top: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032540}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div {
+  float: left;
+  padding: 22px 0;
+  width: 387px;
+  height: 190px;
+  overflow: hidden;
+  line-height: 20px;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032548}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div .address-info {
+  margin-bottom: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032551}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div h3 {
+  font: bold italic 20px/20px "PT Serif", serif;
+  padding-bottom: 16px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032555}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a {
+  color: #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032557}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a:hover {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032561}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div .hidden {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032564}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a.email {
+  display: block;
+  padding-top: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032568}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a.get-direction-link {
+  display: inline-block;
+  padding-right: 37px;
+  font-weight: bold;
+  /*background: url('../images/contact/getdirection.png') no-repeat 90px center;*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032573}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a.get-direction-link:hover {
+  /*background: url('../images/contact/getdirection-hover.png') no-repeat 90px center;*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032576}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a.get-direction-link:hover + span {
+  /*display: inline-block;*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032580}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div span {
+  display: none;
+  font-weight: bold;
+  font-style: italic;
+  color: #919191;
+  text-decoration: underline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032587}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div.even {
+  padding-left: 19px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032589}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div.even a.get-direction-link {
+  left: 19px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032592}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div.even span {
+  left: 139px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032600}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-content {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032602}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-content .getlocations_map_wrapper {
+  padding: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032606}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-footer {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032609}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .gmap-get-direction {
+  position: absolute;
+  top: 365px;
+  left: 312px;
+  width: 225px;
+  height: 45px;
+  background: #222222 url("../images/contact/getdirection-white.png") no-repeat 168px center;
+  color: white;
+  font: bold italic 17px/45px "PT Sans", sans-serif;
+  text-align: center;
+  text-indent: -7px;
+}
+
+/*
+  * Search page
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032632}}
+body.search #page-title {
+  display: none !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032635}}
+body.search #content {
+  width: 945px;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032638}}
+body.search #content #search-block {
+  padding: 39px 0 33px;
+  position: relative;
+  border-bottom: 1px solid #ededed;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032642}}
+body.search #content #search-block h3 {
+  display: block;
+  font: italic 20px/52px "PT Serif", serif;
+  color: #3c3c3c;
+  height: 52px;
+  position: absolute;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032650}}
+body.search #content #search-block #block-views-exp-search-page-page {
+  width: 570px;
+  height: 52px;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032651}}
+body.search #content #search-block #block-views-exp-search-page-page * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032660}}
+body.search #content #search-block #block-views-exp-search-page-page .views-exposed-widgets {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032663}}
+body.search #content #search-block #block-views-exp-search-page-page .views-widget-filter-keys {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032666}}
+body.search #content #search-block #block-views-exp-search-page-page .views-widget-filter-keys label {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032669}}
+body.search #content #search-block #block-views-exp-search-page-page .views-widget-filter-keys input[type="text"] {
+  background: #ececec;
+  height: 52px;
+  width: 512px;
+  font: normal 22px/52px "PT Sans Narrow", sans-serif;
+  padding: 0 15px;
+  color: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032678}}
+body.search #content #search-block #block-views-exp-search-page-page #edit-submit-search-page {
+  width: 55px;
+  height: 52px;
+  background: #222222 url("../images/search/magnifier.png") no-repeat center center;
+  text-indent: -9999px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032689}}
+body.search #headline {
+  height: 63px;
+  border-bottom: 1px solid #ededed;
+  font: normal 25px/63px "PT Sans", sans-serif;
+  color: #3c3c3c;
+  padding-left: 195px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032696}}
+body.search .view-content {
+  padding-left: 195px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #ededed;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032700}}
+body.search .view-content a {
+  font: bold italic 20px/20px "PT Serif", serif;
+  color: #3c3c3c;
+  padding: 18px 0;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032706}}
+body.search .view-content span {
+  font: normal 16px/25px "PT Sans", sans-serif;
+  color: #3c3c3c;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ededed;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032713}}
+body.search .view-content > div {
+  width: 570px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032716}}
+body.search .view-content > div:last-child span {
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032720}}
+body.search .view-empty {
+  font: normal 16px/25px "PT Sans", sans-serif;
+  color: #3c3c3c;
+  width: 570px;
+  margin: 0 auto;
+  padding-top: 17px;
+  padding-bottom: 300px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032728}}
+body.search .item-list {
+  background: url("../images/pager-line.png") repeat-x left top;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032731}}
+body.search .pager {
+  overflow: hidden;
+  width: 570px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 90px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032737}}
+body.search .pager li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032741}}
+body.search .pager li a {
+  display: block;
+  color: #bebebe;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032745}}
+body.search .pager li a, body.search .pager li.pager-current {
+  height: 40px;
+  font: bold 16px/40px "PT Sans Narrow", sans-serif;
+  position: relative;
+  z-index: 10;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032751}}
+body.search .pager li.pager-item a, body.search .pager li.pager-current {
+  width: 26px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032754}}
+body.search .pager li.pager-item:hover {
+  border-top: 1px solid #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032756}}
+body.search .pager li.pager-item:hover a {
+  color: #f58d3a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032760}}
+body.search .pager li.pager-current {
+  color: #3c3c3c;
+  border-top: 1px solid #3c3c3c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032764}}
+body.search .pager li.pager-first {
+  position: absolute;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032767}}
+body.search .pager li.pager-first a {
+  padding: 0 60px 0 17px;
+  background: url("../images/pager-prev.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032772}}
+body.search .pager li.pager-previous {
+  position: absolute;
+  left: 144px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032775}}
+body.search .pager li.pager-previous a {
+  text-indent: -9999px;
+  width: 7px;
+  background: url("../images/pager-prev.png") no-repeat left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032781}}
+body.search .pager li.pager-next {
+  position: absolute;
+  right: 144px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032784}}
+body.search .pager li.pager-next a {
+  text-indent: -9999px;
+  width: 7px;
+  background: url("../images/pager-next.png") no-repeat right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032790}}
+body.search .pager li.pager-last {
+  position: absolute;
+  right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032793}}
+body.search .pager li.pager-last a {
+  padding: 0 17px 0 0;
+  background: url("../images/pager-next.png") no-repeat right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032798}}
+body.search .pager li.pager-ellipsis {
+  display: none;
+}
+
+/*
+  * for iPad / touch device
+  * =======================================================================
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032812}}
+html.touch #header #header-top-wrap #header-top #header-left:hover #header-left-pulldown {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032815}}
+html.touch #header #header-top-wrap #header-top #header-left:hover #header-left-pulldown li {
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032817}}
+html.touch #header #header-top-wrap #header-top #header-left:hover #header-left-pulldown li a {
+  height: 0;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032823}}
+html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover + #header-left-pulldown {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  padding: 15px 0 28px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032826}}
+html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover + #header-left-pulldown li {
+  padding: 1px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/o\.scss}line{font-family:\000032828}}
+html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover + #header-left-pulldown li a {
+  height: 36px;
+  overflow: visible;
+}

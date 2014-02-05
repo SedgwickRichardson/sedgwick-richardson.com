@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Sans+Narrow:400,700|PT+Serif:400,400italic,700,700italic);
+
+$pt_sans_narrow: 'PT Sans Narrow', sans-serif;
+$pt_sans: 'PT Sans', sans-serif;
+$pt_serif: 'PT Serif', serif;
+
+// ========== wysiwyg ==========
+.tl-para {
+  font: noraml 16px/25px $pt_sans;
+  color: #3c3c3c;
+}
+.tl-desc {
+  font: italic 18px/30px $pt_serif;
+  padding-bottom: 32px;
+  color: #3c3c3c;
+}
+.tl-heading {
+  font: bold 16px/25px $pt_sans;
+  padding-bottom: 20px;
+  color: #323232;
+}
+.tl-quote {
+  font: bold italic 25px/33px $pt_serif;
+  color: #323232;
+  padding: 40px 30px;
+} 
+
+// ========== end of wysiwyg ==========

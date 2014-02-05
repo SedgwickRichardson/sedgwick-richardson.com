@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Sans+Narrow:400,700|PT+Serif:400,400italic,700,700italic);
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/layouts\/wysiwyg\.scss}line{font-family:\000036}}
+.tl-desc {
+  font: italic 18px/30px "PT Serif", serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/layouts\/wysiwyg\.scss}line{font-family:\000039}}
+.tl-heading {
+  font: bold 16px/25px "PT Sans", sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr\/site\/sites\/all\/themes\/sr\/sass\/layouts\/wysiwyg\.scss}line{font-family:\0000312}}
+.tl-quote {
+  font: bold italic 25px/33px "PT Serif", serif;
+}

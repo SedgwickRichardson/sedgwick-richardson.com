@@ -1,0 +1,202 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function livereload_init() {
+  if (user_access('use livereload') && variable_get('livereload_js', TRUE)) {
+    if (FALSE == variable_get('livereload_js_local', FALSE)) {
+      // Prepare the path, we suggest the livereload script to be.
+      $http_host = explode(':', $_SERVER['HTTP_HOST']);
+      $path = 'http://' . reset($http_host) . ':35729/livereload.js?snipver=1';
+
+      // Checking whether the file exists before including it. Because it can be
+      // external, we have to use @fopen instead of file_exists().
+      if (@fopen($path, "r")) {
+        drupal_add_js($path, 'external');
+      }
+      else {
+        drupal_set_message(t('Livereload.js could not be included.'), 'warning');
+      }
+
+    }
+    else {
+      drupal_add_js(_livereload_local_js_string(), 'external');
+    }
+  }
+}
+
+
+
+/**
+ * Implements hook_library().
+ */
+function _livereload_local_js_string() {
+  global $base_url;
+
+
+  $output = $base_url . '/';
+
+  $output .= libraries_get_path('livereload') . '/dist/livereload.js?';
+  $output .= 'host=' . check_plain(variable_get('livereload_host', parse_url($base_url, PHP_URL_HOST)));
+  $output .= '&port=' . check_plain(variable_get('livereload_port', 35729));
+  $output .= '&snipver=' . check_plain(variable_get('livereload_snipver', 1));
+  $output .= '&mindelay' . check_plain(variable_get('livereload_mindelay', 1000));
+  $output .= '&maxdelay' . check_plain(variable_get('livereload_maxdelay', 60000));
+
+  return $output;
+}
+
+
+
+/**
+ * Implements hook_permission().
+ */
+function livereload_permission() {
+  return array(
+    'use livereload' => array(
+      'title' => t('Use LiveReload'),
+      'description' => t('Adds the livereload.js if it is enabled.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_css_alter().
+ *
+ * Force CSS to be added with link tags, rather than @import.
+ */
+function livereload_css_alter(&$css) {
+  if (user_access('use livereload') && variable_get('livereload_css', FALSE)) {
+    foreach ($css as $key => $value) {
+      $css[$key]['preprocess'] = FALSE;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_formID_alter().
+ *
+ * Add the possibility to en- and disable the livereload.js.
+ */
+function livereload_form_system_performance_settings_alter(&$form, &$form_state, $form_id) {
+  global $base_url;
+
+  $form['livereload'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'LiveReload',
+  );
+  $form['livereload']['livereload_js'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add livereload.js. <em>Note: this will only work if css aggregation is disabled.</em>'),
+    '#default_value' => variable_get('livereload_js', TRUE),
+    '#states' => array(
+      'disabled' => array(
+        ':input[name=preprocess_css]' => array('checked' => TRUE),
+      ),
+      'checked' => array(
+        ':input[name=preprocess_css]' => array('checked' => FALSE),
+      ),
+    ),
+    '#disabled' => variable_get('preprocess_css'),
+  );
+  $form['livereload']['livereload_js_local'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Load from Drupal'),
+    '#description' => t('Let Drupal append livereload.js to the page request instead of the LiveReload server. Ex: When using guard-livereload without the paid application. Requires the !libraries module and the !livereloadjs file.', array('!libraries' => l('Libraries', 'http://drupal.org/project/libraries'), '!livereloadjs' => l('LiveReload.js', 'https://github.com/livereload/livereload-js/'))),
+    '#default_value' => variable_get('livereload_js_local', FALSE),
+    '#states' => array(
+      'disabled' => array(
+        ':input[name=livereload_js]' => array('checked' => FALSE),
+      ),
+    ),
+  );
+  $form['livereload']['livereload_local_settings'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Settings'),
+    '#states' => array(
+      'visible' => array(
+        'input[name=livereload_js_local]' => array('checked' => TRUE),
+      )
+    ),
+  );
+
+  $form['livereload']['livereload_local_settings']['livereload_host'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Host'),
+    '#description' => t('Host to connect to. Defaults to your current hostname. Do not include the protocol (i.e. http://)'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => variable_get('livereload_host', parse_url($base_url, PHP_URL_HOST)),
+  );
+
+  $form['livereload']['livereload_local_settings']['livereload_port'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Port'),
+    '#size' => 8,
+    '#maxlength' => 7,
+    '#default_value' => variable_get('livereload_port', 35729),
+  );
+
+  $form['livereload']['livereload_local_settings']['livereload_snipver'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Snipver'),
+    '#size' => 8,
+    '#maxlength' => 5,
+    '#default_value' => variable_get('livereload_snipver', 1),
+  );
+
+  $form['livereload']['livereload_local_settings']['livereload_mindelay'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Minimum Delay'),
+    '#size' => 8,
+    '#description' => t('Enter a value in milliseconds.'),
+    '#maxlength' => 5,
+    '#default_value' => variable_get('livereload_mindelay', 1000),
+  );
+
+  $form['livereload']['livereload_local_settings']['livereload_maxdelay'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Maximum Delay'),
+    '#size' => 8,
+    '#description' => t('Enter a value in milliseconds.'),
+    '#maxlength' => 5,
+    '#default_value' => variable_get('livereload_maxdelay', 60000),
+  );
+
+
+  $form['livereload']['livereload_css'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Force CSS to be added with link tags, rather than @import. <em>Note: if this option is enabled, the "%aggregate_css" functionallity of Drupal will not work.</em>', array('%aggregate_css' => t('Aggregate and compress CSS files.'))),
+    '#default_value' => variable_get('livereload_css', 0),
+    '#states' => array(
+      'disabled' => array(
+        ':input[name=preprocess_css]' => array('checked' => TRUE),
+      ),
+      'checked' => array(
+        ':input[name=preprocess_css]' => array('checked' => FALSE),
+      ),
+    ),
+  );
+
+  $form['#validate'][] = 'livereload_system_performance_form_validate';
+}
+
+/**
+ * Validation function for enabling livereload
+ */
+function livereload_system_performance_form_validate(&$form, &$form_state) {
+  $values = $form_state['values'];
+
+  if ($values['preprocess_css'] and $values['livereload_js']) {
+    form_set_error('livereload_js', t('Cannot enable LiveReload with CSS aggregation enabled. Turn off CSS aggregator to continue.'));
+  }
+
+  if ($values['livereload_js_local'] and !module_exists('libraries')) {
+    form_set_error('livereload_js_local', t('You must enable the Libraries module before enabling local javascript settings.'));
+  }
+
+  if ($values['livereload_js_local'] and FALSE === libraries_get_path('livereload')) {
+    form_set_error('livereload_js_local', t('Ensure the livereload.js library is installed before enabling this feature.'));
+  }
+}
