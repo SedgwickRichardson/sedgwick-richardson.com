@@ -2,7 +2,7 @@
   display: none;
 }
 
-/*ul.quicktabs-tabs {
+ul.quicktabs-tabs {
   margin-top: 0;
 }
 ul.quicktabs-tabs li {
@@ -14,4 +14,4 @@ ul.quicktabs-tabs li {
 }
 ul.quicktabs-tabs li a:focus {
   outline: none;
-}*/
+}
