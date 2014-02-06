@@ -210,21 +210,40 @@
  *   );
  * @endcode
  */
-$databases = array (
-  'default' => 
-  array (
+if ($_SERVER['SERVER_NAME'] == "staging.sedgwick-richardson.hk") {
+  $databases = array (
     'default' => 
     array (
-      'database' => 'sr_staging',
-      'username' => 'root',
-      'password' => 'alvarpoon',
-      'host' => 'localhost',
-      'port' => '',
-      'driver' => 'mysql',
-      'prefix' => '',
+      'default' => 
+      array (
+        'database' => 'sr_staging',
+        'username' => 'root',
+        'password' => 'sedgw1ck',
+        'host' => 'localhost',
+        'port' => '',
+        'driver' => 'mysql',
+        'prefix' => '',
+      ),
     ),
-  ),
-);
+  );
+}
+else if ($_SERVER['SERVER_NAME'] == "local.sedgwick-richardson.com") {
+    $databases = array (
+    'default' => 
+    array (
+      'default' => 
+      array (
+        'database' => 'sr_staging',
+        'username' => 'root',
+        'password' => 'alvarpoon',
+        'host' => 'localhost',
+        'port' => '',
+        'driver' => 'mysql',
+        'prefix' => '',
+      ),
+    ),
+  );
+}
 
 /**
  * Access control for update.php script.
