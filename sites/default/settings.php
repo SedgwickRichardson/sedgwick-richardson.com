@@ -235,7 +235,24 @@ else if ($_SERVER['SERVER_NAME'] == "local.sedgwick-richardson.com") {
       array (
         'database' => 'sr_staging',
         'username' => 'root',
-        'password' => '',
+        'password' => 'alvarpoon',
+        'host' => 'localhost',
+        'port' => '',
+        'driver' => 'mysql',
+        'prefix' => '',
+      ),
+    ),
+  );
+}
+else if ($_SERVER['SERVER_NAME'] == "sedgwick-richardson.com" || $_SERVER['SERVER_NAME'] == "www.sedgwick-richardson.com") {
+    $databases = array (
+    'default' => 
+    array (
+      'default' => 
+      array (
+        'database' => 'drupal_a',
+        'username' => 'sr_drupal',
+        'password' => 'sr1234',
         'host' => 'localhost',
         'port' => '',
         'driver' => 'mysql',

@@ -108,6 +108,7 @@ if ($is_front) {
             </li>
             <!--<li><a href="#" id="blog-trigger" class="trigger">Blog</a></li>-->
             <li><a href="#social" id="social-trigger" class="trigger">Share</a></li>
+            <li><a href="https://www.facebook.com/pages/Sedgwick-Richardson/293189647358896" id="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
           </ul>
           <div id="header-right-pulldown">
             <nav id="social" role="navigation">

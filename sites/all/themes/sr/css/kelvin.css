@@ -129,6 +129,7 @@ div#main {
   height: 100%;
   position: relative;
   z-index: 1;
+  -webkit-transform: translate3d(0,0,0);/*fixed chrome z-index problem*/
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\0000381}}
 div#main.hasSidebar {
@@ -296,7 +297,7 @@ div#main.hasSidebar {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003201}}
 #header #header-top-wrap #header-top #parent-title + #page-title {
   padding-left: 5px;
-  width: 330px;
+  width: 280px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003206}}
 #header #header-top-wrap #header-top #header-right {
@@ -1074,7 +1075,8 @@ body.our-work #isotope-container .isotope-element .item-container {
   overflow: hidden;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003924}}
-body.our-work #isotope-container .isotope-element .item-container .thumb-hover {
+body.our-work #isotope-container .isotope-element .item-container .thumb-hover,
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item .thumb-hover {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -1097,7 +1099,8 @@ body.our-work #isotope-container .isotope-element .item-container .thumb-hover {
   color: white;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003939}}
-body.our-work #isotope-container .isotope-element .item-container .thumb-hover h3 {
+body.our-work #isotope-container .isotope-element .item-container .thumb-hover h3,
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item h3 {
   padding-top: 88px;
   font-size: 22px;
   font-weight: bold;
@@ -1114,7 +1117,8 @@ body.our-work #isotope-container .isotope-element .item-container .thumb-hover h
   letter-spacing: 1px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003955}}
-body.our-work #isotope-container .isotope-element .item-container:hover .thumb-hover {
+body.our-work #isotope-container .isotope-element .item-container:hover .thumb-hover,
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item a:hover .thumb-hover {
   top: 0;
   background-color: rgba(245, 141, 58, 0.8);
   /*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccf58d3a', endColorstr='#ccf58d3a');*/
@@ -1406,6 +1410,8 @@ body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-
   word-wrap: break-word;
   overflow: hidden;
   color: rgb(60, 60, 60);
+  position: relative;
+  height:195px;
 }
 body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item a:hover {
 	text-decoration:none;
@@ -1414,12 +1420,20 @@ body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031200}}
 body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item h4 {
   font-size: 20px;
-  color: #202020;
+  color: #fff;
   padding-bottom: 4px/* 24px */;
   font-weight: bold;
   letter-spacing: 2px;
-  text-transform: uppercase;
   height: 44px;
+}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item .thumb-hover h4{
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: #fff;
+  padding: 88px 25px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031208}}
 body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item img {
@@ -3368,13 +3382,17 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-cont
   padding-top: 20px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032775}}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info,
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map
+{
+  line-height: 20px;
+}
 body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div {
   float: left;
   padding: 22px 0;
   width: 387px;
   height: 190px;
   overflow: hidden;
-  line-height: 20px;
   position: relative;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032783}}
@@ -3382,16 +3400,20 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-cont
   margin-bottom: 15px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032786}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div h3 {
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div h3,
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-content > div h3 {
   font: bold italic 20px/20px "PT Serif", serif;
   padding-bottom: 16px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032790}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a {
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a,
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment .view-content a {
   color: #3c3c3c;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032792}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a:hover {
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a:hover,
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment .view-content a:hover
+{
   color: #f58d3a;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032796}}
@@ -3399,7 +3421,9 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-cont
   display: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032799}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a.email {
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a.email,
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-content a.email
+{
   display: block;
   padding-top: 10px;
 }
@@ -3432,6 +3456,16 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-cont
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032828}}
 body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-content {
   position: relative;
+  float: right;
+}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment {
+  padding: 40px;
+  padding-right:0;
+  float: left;
+  width: 256px;
+}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment .view-content{
+  float: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032830}}
 body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-content .getlocations_map_wrapper {
@@ -3445,7 +3479,7 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-foote
 body.section-contact #block-quicktabs-contact-tabs .view-contact-map .gmap-get-direction {
   position: absolute;
   top: 365px;
-  left: 312px;
+  left: 194px;
   width: 225px;
   height: 45px;
   background: #222222 url("../images/contact/getdirection-white.png") no-repeat 168px center;
@@ -3453,6 +3487,9 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-map .gmap-get-d
   font: bold italic 17px/45px "PT Sans", sans-serif;
   text-align: center;
   text-indent: -7px;
+}
+body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment .gmap-get-direction{
+  /*display:none;*/
 }
 /*
   

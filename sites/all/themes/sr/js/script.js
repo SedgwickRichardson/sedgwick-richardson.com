@@ -1426,7 +1426,7 @@ if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
         });
 
         // gmap get direction button
-        $('<a href="' + url + '" target="_blank" class="gmap-get-direction">Get directions</a>').appendTo($(".view-contact-map").eq(i).find('.view-content'));
+        $('<a href="' + url + '" target="_blank" class="gmap-get-direction">Get directions</a>').appendTo($(".quicktabs-tabpage>.view-contact-map>.view-content").eq(i));
       });
     }
 	
