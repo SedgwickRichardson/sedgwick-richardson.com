@@ -43,6 +43,7 @@ body.node-type-our-work #maincontent #maincontent-wrap #o-r a:hover{
 sup{
 	vertical-align: super;
 	font-size: smaller;
+	line-height: 0;
 }
 .item-container .thumb-hover{
 	padding: 0 5px;
@@ -71,13 +72,16 @@ body.node-type-our-work #banner #banner-text #banner-text-bottom {
 body.our-work #isotope-container .isotope-element .item-container .thumb-hover h4 {
   font-size: 15px;
 }
+body.our-work #isotope-container .isotope-element .item-container .thumb-hover h4:hover {
+  text-decoration: none;
+}
 body.our-work #isotope-container .isotope-element .item-container .thumb-hover h3{
   font-size: 18px;
   padding: 88px 25px 0;
 }
 body.clients #isotope-container.tileview .isotope-element div.item-container:hover .thumb-hover {
-	background-color: rgba(0, 0, 0, 0.7);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B3000000', endColorstr='#B3000000');
+	/*background-color: rgba(0, 0, 0, 0.7);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B3000000', endColorstr='#B3000000');*/
 }
 body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div .address-info{
 	margin-bottom: 10px;
@@ -139,6 +143,14 @@ body.node-type-news #content .view-news #node-pager a#next,
 body.news #content .view-news .pager li.pager-next a,
 body.news #content .view-news .pager li.pager-last a {
 	background: url("../images/pager-next.png") no-repeat right top;
+	-webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 body.thought-leadership #content > .view-thought-leadership .pager li.pager-last a:hover,
 body.thought-leadership #content > .view-thought-leadership .pager li.pager-next a:hover,
@@ -229,6 +241,14 @@ body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-co
 }
 body.news #content section.region-sidebar .accordion > ul a{
 	padding:0;
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
 }
 /* 20130930 hide the thought leadership content page left tags */
 body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container section#left h4,
@@ -240,5 +260,13 @@ body.culture-careers #maincontent #upper > div > div, body.culture-careers #main
 	display: none;
 }
 body.news #content .view-news .view-content > div a, body.node-type-news #content .view-news .view-content > div a {
-	color: #f58d3a;
+	color: #3c3c3c;
+	-webkit-transition-property: color;
+	-moz-transition-property: color;
+	-o-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
 }

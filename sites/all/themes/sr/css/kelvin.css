@@ -130,6 +130,10 @@ div#main {
   position: relative;
   z-index: 1;
   -webkit-transform: translate3d(0,0,0);/*fixed chrome z-index problem*/
+  background-color: white;
+}
+body.contact div#main{
+  background:none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\0000381}}
 div#main.hasSidebar {
@@ -168,11 +172,11 @@ div#main.hasSidebar {
   position: relative;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003109}}
-#header #header-top-wrap #header-top #header-left:hover #logo div {
+#header #header-top-wrap #header-top #header-left #logo div:hover {
   background: url("../images/logo.png") no-repeat left bottom;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003112}}
-#header #header-top-wrap #header-top #header-left:hover #triangle-hotspot {
+#header #header-top-wrap #header-top #header-left #triangle-hotspot:hover {
   background: url("../images/main-menu-arrow-hover.png") no-repeat center center;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003116}}
@@ -193,12 +197,13 @@ div#main.hasSidebar {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003129}}
 #header #header-top-wrap #header-top #header-left #triangle-hotspot {
   height: 62px;
-  left: 125px;
+  left: 145px;/*left: 125px;*/
   position: absolute;
   top: 0;
-  width: 35px;
+  width: 50px;
   z-index: 52;
   background: url("../images/main-menu-arrow.png") no-repeat center center;
+  cursor: pointer;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003138}}
 #header #header-top-wrap #header-top #header-left #header-left-pulldown {
@@ -214,7 +219,7 @@ div#main.hasSidebar {
   transition-duration: 0.5s;
   position: absolute;
   top: 62px;
-  left: 0;
+  left: -10px;/*left: 0;*/
   width: 192px;
   background: #222222;
   padding: 0;
@@ -243,30 +248,32 @@ div#main.hasSidebar {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
   display: block;
-  padding: 0 12px;
+  padding: 0 12px 0 18px;/*padding: 0 12px;*/
   height: 0;
   overflow: hidden;
   font-family: "PT Sans Narrow", sans-serif;
+  font-weight: bold;
   color: #d5d5d5;
   line-height: 36px;
+  font-size: 17px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003163}}
 #header #header-top-wrap #header-top #header-left #header-left-pulldown .menu li a:hover {
-  background: black;
-  color: white;
+  background: white;
+  color: #222222;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003170}}
-#header #header-top-wrap #header-top #header-left:hover > #header-left-pulldown {
+#header #header-top-wrap #header-top #header-left #triangle-hotspot:hover > #header-left-pulldown {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
-  padding: 15px 0 28px;
+  padding: 15px 0 15px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003173}}
-#header #header-top-wrap #header-top #header-left:hover > #header-left-pulldown li {
+#header #header-top-wrap #header-top #header-left #triangle-hotspot:hover > #header-left-pulldown li {
   padding: 1px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003175}}
-#header #header-top-wrap #header-top #header-left:hover > #header-left-pulldown li a {
+#header #header-top-wrap #header-top #header-left #triangle-hotspot:hover > #header-left-pulldown li a {
   height: 36px;
   overflow: visible;
 }
@@ -285,6 +292,14 @@ div#main.hasSidebar {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003192}}
 #header #header-top-wrap #header-top #parent-title a, #header #header-top-wrap #header-top #page-title a {
   color: #919191;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003194}}
 #header #header-top-wrap #header-top #parent-title a:hover, #header #header-top-wrap #header-top #page-title a:hover {
@@ -324,6 +339,14 @@ div#main.hasSidebar {
   color: #919191;
   text-transform: uppercase;
   padding: 0 10px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003224}}
 #header #header-top-wrap #header-top #header-right #header-right-menu li a:hover, #header #header-top-wrap #header-top #header-right #header-right-menu li a.active {
@@ -510,6 +533,14 @@ div#main.hasSidebar {
   font: bold 14px/45px "PT Sans Narrow", sans-serif;
   display: block;
   height: 45px;
+  -webkit-transition-property: all;
+-moz-transition-property: all;
+-o-transition-property: all;
+transition-property: all;
+-webkit-transition-duration: 0.5s;
+-moz-transition-duration: 0.5s;
+-o-transition-duration: 0.5s;
+transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003370}}
 #header #header-bottom-wrap #header-bottom .menu li a:hover, #header #header-bottom-wrap #header-bottom .menu li a.active-trail {
@@ -529,6 +560,8 @@ div#main.hasSidebar {
 #footer {
   border-top: 2px solid #f58d3a;
   background: #222222;
+  position: fixed;
+  bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003396}}
 #footer #footer-top {
@@ -716,6 +749,7 @@ nav.control .control-wrap a:first-child {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003617}}
 .accordion ul li {
   display: block;
+  margin-bottom: 12px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003620}}
 .accordion ul a, .accordion ul span {
@@ -723,9 +757,9 @@ nav.control .control-wrap a:first-child {
   /* padding-bottom: 13px; */
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003623}}
-.accordion ul a:hover, .accordion ul span:hover {
+/*.accordion ul a:hover, .accordion ul span:hover {
   text-decoration: underline;
-}
+}*/
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003629}}
 .accordion.selected > a.suffix:after {
   content: " -";
@@ -1039,6 +1073,14 @@ body.our-work #block-sr-ourwork-options .isotope-options #deliverable div a {
   font-family: "PT Sans Narrow", sans-serif;
   color: #3c3c3c;
   letter-spacing: 1px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003894}}
 body.our-work #block-sr-ourwork-options .isotope-options #deliverable div a:hover {
@@ -1204,6 +1246,14 @@ body.node-type-our-work #banner #banner-text {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031026}}
 body.node-type-our-work #banner #banner-text a {
   color: #363636;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031030}}
 body.node-type-our-work #banner #banner-text #banner-text-top {
@@ -1242,14 +1292,23 @@ body.node-type-our-work #banner #banner-text #banner-text-bottom #pager {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031056}}
 body.node-type-our-work #banner #banner-text #banner-text-bottom #pager #prev {
   float: left;
-  background: url("../images/our_work/pager_prev2.png") no-repeat left center;
+  background: url("../images/our_work/pager_prev2.png") no-repeat left top;
   padding-left: 18px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031061}}
 body.node-type-our-work #banner #banner-text #banner-text-bottom #pager #next {
   float: right;
-  background: url("../images/our_work/pager_next2.png") no-repeat right center;
+  background: url("../images/our_work/pager_next2.png") no-repeat right top;
   padding-right: 18px;
+}
+body.node-type-our-work #banner #banner-text a:hover{
+  color: #f58d3a;  
+}
+body.node-type-our-work #banner #banner-text #banner-text-bottom #pager #next:hover{
+  background-position: right bottom;
+}
+body.node-type-our-work #banner #banner-text #banner-text-bottom #pager #prev:hover{
+  background-position: left bottom;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031066}}
 body.node-type-our-work #banner #banner-text #banner-text-bottom #pager .disable {
@@ -1382,6 +1441,17 @@ body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031173}}
 body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-header #pager2 a {
   color: #202020;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-header #pager2 a:hover{
+  color: rgb(245, 141, 58);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031176}}
 body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-header #pager2 span {
@@ -1411,7 +1481,15 @@ body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-
   overflow: hidden;
   color: rgb(60, 60, 60);
   position: relative;
-  height:195px;
+  height:100%;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item a:hover {
 	text-decoration:none;
@@ -1423,7 +1501,6 @@ body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-
   color: #fff;
   padding-bottom: 4px/* 24px */;
   font-weight: bold;
-  letter-spacing: 2px;
   height: 44px;
 }
 body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item .thumb-hover h4{
@@ -1434,6 +1511,9 @@ body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-
   font-size: 15px;
   color: #fff;
   padding: 88px 25px 0;
+}
+body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item .thumb-hover h4:hover{
+  text-decoration: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031208}}
 body.node-type-our-work #maincontent #maincontent-wrap #carousel .view-our-work-carousel .view-content .jcarousel-item img {
@@ -1594,7 +1674,7 @@ body.about-us #ourfocus h4, body.our-people #ourfocus h4 {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031359}}
 body.about-us #ourfocus span, body.our-people #ourfocus span {
-  color: #f58d3a;
+  font-weight: bold;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031362}}
 body.about-us #ourfocus sup, body.our-people #ourfocus sup {
@@ -1646,9 +1726,17 @@ body.about-us #expertise > div > article > ul a {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031408}}
 body.about-us #expertise > div > article > ul .accordion > a {
-  height: 40px;
-  font: bold 16px/40px "PT Sans", sans-serif;
+  height: 45px;
+  font: bold 16px/45px "PT Sans", sans-serif;
   color: black;
+  -webkit-transition-property: all;
+-moz-transition-property: all;
+-o-transition-property: all;
+transition-property: all;
+-webkit-transition-duration: 0.5s;
+-moz-transition-duration: 0.5s;
+-o-transition-duration: 0.5s;
+transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031412}}
 body.about-us #expertise > div > article > ul .accordion > a:hover {
@@ -1667,10 +1755,11 @@ body.about-us #expertise > div > article > ul .accordion ul {
   padding: 0;
   overflow: hidden;
   height: 0;
+  margin-top:5px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031422}}
 body.about-us #expertise > div > article > ul .accordion ul a, body.about-us #expertise > div > article > ul .accordion ul span {
-  font: normal 15px/18px "PT Sans", sans-serif;
+  font: normal 15px/25px "PT Sans", sans-serif;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031437}}
 body.our-people .headline {
@@ -1721,6 +1810,14 @@ body.our-people #outmanagement > div article .right h3 {
 body.our-people #outmanagement > div article .right a {
   font-weight: bold;
   color: #3c3c3c;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031474}}
 body.our-people #outmanagement > div article .right a:hover {
@@ -2000,6 +2097,14 @@ body.thought-leadership #content > .view-thought-leadership .view-content > div 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031660}}
 body.thought-leadership #content > .view-thought-leadership .view-content > div a {
   color: #3c3c3c;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031662}}
 body.thought-leadership #content > .view-thought-leadership .view-content > div a:hover {
@@ -2193,11 +2298,27 @@ body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager a
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031822}}
 body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager a#prev, body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager span#prev {
   background-image: url("../images/our_work/pager_prev.png");
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031825}}
 body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager a#next, body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager span#next {
   background-image: url("../images/our_work/pager_next.png");
   border-left: none;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031829}}
 body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager a:hover, body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager span:hover {
@@ -2217,6 +2338,14 @@ body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager +
   font: bold italic 17px/60px "PT Sans", sans-serif;
   color: #888888;
   border-left: 1px solid #cecece;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031845}}
 body.node-type-thought-leadership #maincontent #maincontent-wrap #title #pager + a:hover {
@@ -2311,7 +2440,15 @@ body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-co
   padding-left: 18px;
   font: bold 16px/16px "PT Sans Narrow", sans-serif;
   color: #bebebe;
-  background: url("../images/why_sr/thought_leadership/back-arrow.png") no-repeat left 6px;
+  background: url("../images/why_sr/thought_leadership/back-arrow.png") no-repeat left 5px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031918}}
 body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right #back a:hover {
@@ -2521,6 +2658,14 @@ body.culture-careers #maincontent #careers #careers-container ul li {
 body.culture-careers #maincontent #careers #careers-container ul a {
   font: bold 16px/20px "PT Sans Narrow", sans-serif;
   color: #bebebe;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032113}}
 body.culture-careers #maincontent #careers #careers-container ul a:hover {
@@ -2563,6 +2708,14 @@ body.culture-careers #maincontent #careers #careers-container #careers-content d
   color: #3c3c3c;
   display: none;
   margin-bottom: 40px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032146}}
 body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-download:hover {
@@ -2577,6 +2730,14 @@ body.culture-careers #maincontent #careers #careers-container #careers-content d
   font: bold italic 17px/46px "PT Sans", sans-serif;
   color: white;
   text-align: center;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032158}}
 body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-apply:hover {
@@ -2783,6 +2944,14 @@ body.clients #block-sr-clients-options .isotope-options a {
   font-size: 15px;
   font-family: "PT Sans Narrow", sans-serif;
   color: #6c6c6c;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032332}}
 body.clients #block-sr-clients-options .isotope-options a:hover {
@@ -2867,8 +3036,11 @@ body.clients #isotope-container.tileview .isotope-element .item-container .thumb
   font-style: italic;
   letter-spacing: 1px;
 }
+body.clients #isotope-container.tileview .isotope-element .item-container .thumb-hover h4:hover{
+  text-decoration: none;
+}
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032396}}
-body.clients #isotope-container.tileview .isotope-element .item-container:hover .thumb-hover {
+body.clients #isotope-container.tileview .isotope-element a.item-container:hover .thumb-hover {
   top: 0;
   background-color: rgba(245, 141, 58, 0.8);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccf58d3a', endColorstr='#ccf58d3a');
@@ -2883,14 +3055,18 @@ body.clients #isotope-container.tileview .isotope-element .item-container img {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032408}}
 body.clients #isotope-container.tileview .isotope-element div.item-container .thumb-hover {
   background-color: rgba(0, 0, 0, 0.8);
-  background: black;
-  top: 195px;
+  /*background: black;
+  top: 195px;*/
+  -webkit-transition-property: none;
+  -moz-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032413}}
-body.clients #isotope-container.tileview .isotope-element div.item-container:hover .thumb-hover {
+/*body.clients #isotope-container.tileview .isotope-element div.item-container:hover .thumb-hover {
   background-color: rgba(0, 0, 0, 0.8);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#cc000000', endColorstr='#cc000000');
-}
+}*/
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032419}}
 body.clients #isotope-container.listview {
   width: 945px;
@@ -3045,6 +3221,17 @@ body.news #content section.region-sidebar .accordion > a, body.node-type-news #c
   color: #3c3c3c;
   padding-bottom: 20px;
   display: block;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+body.news #content section.region-sidebar .accordion > a:hover, body.node-type-news #content section.region-sidebar .accordion > a:hover{
+  color: #f58d3a;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003518}}
 body.news #content section.region-sidebar .accordion > ul, body.node-type-news #content section.region-sidebar .accordion > ul {
@@ -3054,6 +3241,17 @@ body.news #content section.region-sidebar .accordion > ul, body.node-type-news #
 body.news #content section.region-sidebar .accordion > ul a, body.news #content section.region-sidebar .accordion > ul span, body.node-type-news #content section.region-sidebar .accordion > ul a, body.node-type-news #content section.region-sidebar .accordion > ul span {
   font: normal 15px/18px "PT Sans Narrow", sans-serif;
   color: #3c3c3c;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+body.news #content section.region-sidebar .accordion > ul a:hover,body.node-type-news #content section.region-sidebar .accordion > ul a:hover{
+  color: #f58d3a;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\00003523}}
 body.news #content section.region-sidebar .accordion > ul a:hover, body.news #content section.region-sidebar .accordion > ul span:hover, body.node-type-news #content section.region-sidebar .accordion > ul a:hover, body.node-type-news #content section.region-sidebar .accordion > ul span:hover {
@@ -3066,6 +3264,7 @@ body.news #content section.region-sidebar .accordion > ul a.current, body.news #
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032517}}
 body.news #content #block-views-news-content-page, body.node-type-news #content #block-views-news-content-page {
   overflow: hidden;
+  background-color: #ececec;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032520}}
 body.news #content .view-news, body.node-type-news #content .view-news {
@@ -3153,6 +3352,14 @@ body.news #content .view-news .pager li a, body.news #content .view-news .pager 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032584}}
 body.news #content .view-news .pager li.pager-item a, body.news #content .view-news .pager li.pager-current, body.node-type-news #content .view-news .pager li.pager-item a, body.node-type-news #content .view-news .pager li.pager-current {
   width: 26px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032587}}
 body.news #content .view-news .pager li.pager-item:hover, body.node-type-news #content .view-news .pager li.pager-item:hover {
@@ -3379,7 +3586,7 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-cont
   width: 774px;
   margin: 0 auto;
   border-top: 1px solid #ededed;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032775}}
 body.section-contact #block-quicktabs-contact-tabs .view-contact-info,
@@ -3389,7 +3596,7 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-map
 }
 body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div {
   float: left;
-  padding: 22px 0;
+  padding: 20px 0 24px;
   width: 387px;
   height: 190px;
   overflow: hidden;
@@ -3409,6 +3616,14 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-conte
 body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a,
 body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment .view-content a {
   color: #3c3c3c;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032792}}
 body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a:hover,
@@ -3487,6 +3702,14 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-map .gmap-get-d
   font: bold italic 17px/45px "PT Sans", sans-serif;
   text-align: center;
   text-indent: -7px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment .gmap-get-direction{
   /*display:none;*/
@@ -3565,6 +3788,14 @@ body.search #content #search-block #block-views-exp-search-page-page #edit-submi
   text-indent: -9999px;
   margin-left: 3px;
   cursor: pointer;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032918}}
 body.search #headline {
@@ -3584,8 +3815,19 @@ body.search .view-content {
 body.search .view-content a {
   font: bold italic 20px/20px "PT Serif", serif;
   color: #3c3c3c;
-  padding: 18px 0;
+  padding: 18px 0 10px;
   display: block;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+body.search .view-content a:hover{
+  color: #f58d3a;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032936}}
 body.search .view-content span {
@@ -3598,6 +3840,8 @@ body.search .view-content span {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032943}}
 body.search .view-content > div {
   width: 570px;
+  margin-bottom: 25px;
+  line-height: 18px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032944}}
 body.search .view-content > div:last-child span {
@@ -3634,6 +3878,14 @@ body.search .pager li {
 body.search .pager li a {
   display: block;
   color: #bebebe;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032971}}
 body.search .pager li a,
@@ -3715,32 +3967,32 @@ body.search .pager li.pager-ellipsis {
   
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000033027}}
-html.touch #header #header-top-wrap #header-top #header-left:hover #header-left-pulldown {
+html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot:hover > #header-left-pulldown {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   padding: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000033032}}
-html.touch #header #header-top-wrap #header-top #header-left:hover #header-left-pulldown li {
+html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot:hover > #header-left-pulldown li {
   padding: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000033033}}
-html.touch #header #header-top-wrap #header-top #header-left:hover #header-left-pulldown li a {
+html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot:hover > #header-left-pulldown li a {
   height: 0;
   overflow: hidden;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000033037}}
-html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover + #header-left-pulldown {
+html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover > #header-left-pulldown {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   padding: 15px 0 28px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000033042}}
-html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover + #header-left-pulldown li {
+html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover > #header-left-pulldown li {
   padding: 1px 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000033043}}
-html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover + #header-left-pulldown li a {
+html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover > #header-left-pulldown li a {
   height: 36px;
   overflow: visible;
 }

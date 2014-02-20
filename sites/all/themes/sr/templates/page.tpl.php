@@ -83,12 +83,12 @@ if ($is_front) {
         <div id="header-left">
 
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><div></div></a>
-          <div id="triangle-hotspot"></div>
-          <!--            <a href="#" id="main-menu-trigger" class="trigger">toggle main-menu</a>-->
-          <div id="header-left-pulldown">
-            <nav id="main-menu" role="navigation">
-              <?php print render($page['main_menu']); ?>
-            </nav>
+          <div id="triangle-hotspot">
+            <div id="header-left-pulldown">
+              <nav id="main-menu" role="navigation">
+                <?php print render($page['main_menu']); ?>
+              </nav>
+            </div>
           </div>
         </div>
 

@@ -8,6 +8,8 @@ if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
   };
 }
 
+var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+
 (function($, Drupal, window, document, undefined) {
 
   /*
@@ -98,15 +100,32 @@ if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
     var mainH = $('#main').outerHeight() + ($('body').hasClass('admin-menu') ? 29 : 0);
     var footerH = $('#footer').height();
 
-    if (winH > (mainH + footerH)) {
-      $('#footer').css({
-        'position': 'fixed',
-        'bottom': 0
-      });
-      $('html').css({
-        'background': 'white'
-      });
-    } else {
+    var contentH;
+    contentH = mainH + footerH;
+    //console.log(winH+" "+mainH+" "+footerH+" "+contentH);
+
+    if (winH > contentH) {
+      if(isChrome){
+        $('#footer').css({
+          'position': 'absolute',
+          'bottom': -footerH
+        });
+        $('body').css({
+          'background': '#222'
+        });
+     }
+      else{
+        $('#footer').css({
+          'position': 'fixed',
+          'bottom': 0
+        });
+        $('html').css({
+          'background': 'white'
+        });
+      }
+    }
+    else {
+      //console.log("static");
       $('#footer').css({
         'position': 'static',
         'bottom': 'auto'
@@ -157,6 +176,14 @@ if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
     $('#triangle-hotspot').click(function(e) {
       $(this).toggleClass('hover');
     });
+
+    /*$('body').click(function(e){
+    if($(e.target).is('a')){
+      return;
+    }else{
+      $('#triangle-hotspot').toggleClass('hover');
+    }
+  });*/
 
     // fixed ipad no-refresh issue after clicked back button
 //    var event;
