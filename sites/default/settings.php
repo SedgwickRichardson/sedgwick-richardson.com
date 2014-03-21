@@ -217,7 +217,7 @@ if ($_SERVER['SERVER_NAME'] == "staging.sedgwick-richardson.hk") {
       'default' => 
       array (
         'database' => 'sr_staging',
-        'username' => 'root',
+        'username' => 'michiel',
         'password' => 'sedgw1ck',
         'host' => 'localhost',
         'port' => '',

@@ -225,9 +225,9 @@ body.thought-leadership .region-sidebar .accordion ul li{
 	margin-bottom: 0.5em;
 }
 .view-thought-leadership #maincontent-container h3{
-	font: bold 100%/100% "PT Sans", sans-serif;
-	margin-top: 1em;
-	margin-bottom: 2.5em;
+	font: bold 120%/100% "PT Sans", sans-serif;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
 }
 .view-thought-leadership #maincontent-container p{
 	padding-bottom: 16px;
@@ -237,8 +237,15 @@ body.thought-leadership .region-sidebar .accordion ul li{
 	margin-top: 1.5em;
 }
 body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-container > section#right article#sr .tl-em {
- font: italic 14px/18px "PT Sans", sans-serif;
+	font: italic 14px/18px "PT Sans", sans-serif
 }
+
+body.node-type-thought-leadership #maincontent-container ul{
+	padding-bottom: 16px;
+	list-style-type: disc;
+	padding-left: 20px;
+}
+
 body.news #content section.region-sidebar .accordion > ul a{
 	padding:0;
 	-webkit-transition-property: all;
@@ -269,4 +276,10 @@ body.news #content .view-news .view-content > div a, body.node-type-news #conten
 	-moz-transition-duration: 0.5s;
 	-o-transition-duration: 0.5s;
 	transition-duration: 0.5s;
+}
+.view-thought-leadership #maincontent-container .nobottompadding{
+	padding-bottom: 0
+}
+.view-thought-leadership #maincontent-container strong{
+	font-weight: bold;
 }
