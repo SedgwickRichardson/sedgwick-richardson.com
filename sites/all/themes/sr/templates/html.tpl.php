@@ -82,7 +82,7 @@
     <?php if ($default_mobile_metatags): ?>
       <meta name="MobileOptimized" content="width">
       <meta name="HandheldFriendly" content="true">
-      <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <?php endif; ?>
     <meta http-equiv="cleartype" content="on">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|PT+Sans+Narrow:400,700|PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>

@@ -73,13 +73,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\0000327}}
 html {
   background-color: #222222;
+  height: 100%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\0000331}}
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
   color: #3c3c3c;
-  background-color: white;
+  background-color: #222222;
+  min-height: 100%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\0000336}}
 body ::selection {
@@ -3167,7 +3169,8 @@ body.clients #loadmore:hover {
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032507}}
 body.news #footer, body.node-type-news #footer {
-  position: relative;
+  position: fixed;
+  bottom: 0;
   z-index: 40;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032511}}
@@ -3275,13 +3278,15 @@ body.news #content .view-news, body.node-type-news #content .view-news {
   padding-left: 87px;
   z-index: 2;
   background: white;
+  /*adding-bottom: 300px;*/
+  min-height:800px !important;
   -webkit-box-shadow: #cccccc 5px 0px 5px inset;
   -moz-box-shadow: #cccccc 5px 0px 5px inset;
   box-shadow: #cccccc 5px 0px 5px inset;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032529}}
 body.news #content .view-news .view-content, body.node-type-news #content .view-news .view-content {
-  padding-bottom: 35px;
+  padding-bottom: 75px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032531}}
 body.news #content .view-news .view-content > div, body.node-type-news #content .view-news .view-content > div {

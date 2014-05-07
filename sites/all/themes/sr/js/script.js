@@ -102,10 +102,10 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 
     var contentH;
     contentH = mainH + footerH;
-    //console.log(winH+" "+mainH+" "+footerH+" "+contentH);
+    console.log(winH+" "+mainH+" "+footerH+" "+contentH);
 
     if (winH > contentH) {
-      if(isChrome){
+      /*if(isChrome){
         $('#footer').css({
           'position': 'absolute',
           'bottom': -footerH
@@ -113,8 +113,8 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
         $('body').css({
           'background': '#222'
         });
-     }
-      else{
+      }
+      else{*/
         $('#footer').css({
           'position': 'fixed',
           'bottom': 0
@@ -122,7 +122,7 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
         $('html').css({
           'background': 'white'
         });
-      }
+      //}
     }
     else {
       //console.log("static");

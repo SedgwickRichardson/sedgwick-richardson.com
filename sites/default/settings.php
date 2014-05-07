@@ -235,7 +235,7 @@ else if ($_SERVER['SERVER_NAME'] == "local.sedgwick-richardson.com") {
       array (
         'database' => 'sr_staging',
         'username' => 'root',
-        'password' => 'alvarpoon',
+        'password' => 'root',
         'host' => 'localhost',
         'port' => '',
         'driver' => 'mysql',
