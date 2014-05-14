@@ -10,18 +10,18 @@
 }
 
 .mb-left-shadow {
-	background-image: url("../images/leftshadow.png");
+	/*background-image: url("../images/leftshadow.png");*/
 	left: 0;
 }
 
 .mb-right-shadow {
-	background-image: url("../images/rightshadow.png");
+	/*background-image: url("../images/rightshadow.png");*/
 	right: 0;
 }
 
 /*** Left & Right Navigation Arrows ***/
 a.mb-scrollButtons {
-	background: url(../images/arrows.gif) no-repeat;
+	/*background: url(../images/arrows.gif) no-repeat;*/
 	margin: 0;
 	top: 40%;
 	/*  the margin-top below may be causing problems, so adjust the % above... */

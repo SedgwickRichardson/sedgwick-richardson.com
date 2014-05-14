@@ -570,44 +570,65 @@ function sr_block_view($delta = '') {
 
     case 'culturecareers_careers':
       $html = "<div id='careers-container'><ul>";
-      $temp = "<div id='careers-content'>";
+      $temp = "";
+      $overview_html = "<div id='careers-content'><div id='overview' class='active'>";
 
       $sql = "SELECT n.nid,
                      n.title,
                      n.created,
                      b.body_value,
                      jl.field_cc_jobs_location_value,
-                     p.field_pdf_fid
+                     p.field_pdf_fid,
+                     o.field_overview_value
               FROM node as n               
               LEFT JOIN field_data_field_cc_jobs_location as jl
                 ON jl.entity_id = n.nid
               LEFT JOIN field_data_field_pdf as p
                 ON p.entity_id = n.nid
+              LEFT JOIN field_data_field_overview as o
+                ON o.entity_id = n.nid
               LEFT JOIN field_data_body as b
                 ON b.entity_id = n.nid
               WHERE n.type = 'culture_career_jobs'
                 AND n.status = 1";
-      foreach (db_query($sql) as $key => $result) {
-        if ($key == 0) {
-          $html .= "<li><a href='#jobs-$result->nid' class='current'>$result->title<br/>(" . $result->field_cc_jobs_location_value . ")
-                      <br/>
-                      <span>Posting date: " . date('d/m/y', $result->created) . "</span>
-                    </a></li>";
-          $temp .= "<div id='jobs-$result->nid' class='active'>$result->body_value<a class='careers-download' target='_blank' href='"
-                  . file_create_url(file_load($result->field_pdf_fid)->uri)
-                  . "'>Download pdf for more detail</a><a href='mailto:infosg@sedgwick-richardson.com' class='careers-apply'>Contact us for more details</a></div>";
-        } else {
-          $html .= "<li><a href='#jobs-$result->nid'>$result->title<br/>(" . $result->field_cc_jobs_location_value . ")
-                      <br/>
-                      <span>Posting date: " . date('d/m/y', $result->created) . "</span>      
-                    </a></li>";
-          $temp .= "<div id='jobs-$result->nid'>$result->body_value<a class='careers-download' target='_blank' href='"
-                  . file_create_url(file_load($result->field_pdf_fid)->uri)
-                  . "'>Download pdf for more detail</a><a href='mailto:infosg@sedgwick-richardson.com' class='careers-apply'>Contact us for more details</a></div>";
-        }
+      $results = db_query($sql);
+      
+      //if there's any job adv, add overview tab link
+      if($results->rowCount()>0){
+        $html .= "<li><a href='#overview' class='current'>Overview</a></li>";
       }
-      $temp .= "</div>";
-      $html .= "</ul>" . $temp;
+      foreach ($results as $key => $result) {
+        if($key==sizeof($result)){
+            $class="last";
+          }
+        else{
+            $class="";
+        }
+
+        $location = $result->field_cc_jobs_location_value;
+        if($location=="Hong Kong"){
+            $email="infohk@sedgwick-richardson.com";
+          }
+        else if($location=="Singapore"){
+            $email="infosg@sedgwick-richardson.com";
+        }
+
+        $overview_html .= "<div class='$class'><p>$result->field_overview_value</p><a class='careers-download' target='_blank' href='"
+                  . file_create_url(file_load($result->field_pdf_fid)->uri)
+                  . "'>Download pdf for more detail</a><a href='mailto:$email?subject=Inquiry about $result->title Position' class='careers-apply'>Contact us for more details</a></div>";
+
+        $html .= "<li><a href='#jobs-$result->nid'>$result->title<br/>(" . $result->field_cc_jobs_location_value . ")
+                    <br/>
+                    <span>Posting date: " . date('d/m/y', $result->created) . "</span>      
+                  </a></li>";
+        $temp .= "<div id='jobs-$result->nid'>$result->body_value<p>Please send us a short email convincing us why we should hire you along with your résumé and portfolio.</p><a class='careers-download' target='_blank' href='"
+                . file_create_url(file_load($result->field_pdf_fid)->uri)
+                . "'>Download pdf for more detail</a><a href='mailto:$email?subject=Application for $result->title Position' class='careers-apply'>Apply</a></div>";
+
+      }
+
+      $overview_html .= "</div>"; 
+      $html .= "</ul>" . $overview_html . $temp . "</div>";
 
       $html .= "</div>";
       $block['content'] = $html;
