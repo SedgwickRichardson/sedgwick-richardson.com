@@ -2641,7 +2641,8 @@ body.culture-careers #maincontent #careers h3 {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032098}}
 body.culture-careers #maincontent #careers #careers-container {
-  width: 945px;
+  /*width: 945px;*/
+  width: 740px;
   margin: 0 auto;
   border-top: 1px solid #ededed;
   padding: 30px 0 63px;
@@ -2683,15 +2684,21 @@ body.culture-careers #maincontent #careers #careers-container ul a span {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032124}}
 body.culture-careers #maincontent #careers #careers-container #careers-content {
-  float: left;
-  width: 740px;
+  /*float: left;
+  width: 740px;*/
   position: relative;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032128}}
-body.culture-careers #maincontent #careers #careers-container #careers-content div {
-  position: absolute;
-  z-index: 1;
-  display: none;
+body.culture-careers #maincontent #careers #careers-container #careers-content>div {
+  padding-bottom: 27px;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 20px;
+  display: block;
+}
+body.culture-careers #maincontent #careers #careers-container #careers-content>div.last{
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032129}}
 body.culture-careers #maincontent #careers #careers-container #careers-content div.active {
@@ -2720,6 +2727,9 @@ body.culture-careers #maincontent #careers #careers-container #careers-content d
   padding-bottom: 18px;
 }
 body.culture-careers #maincontent #careers #careers-container #careers-content div h4 {
+  font: bold 16px "PT Sans", sans-serif;
+}
+body.culture-careers #maincontent #careers #careers-container #careers-content .career-details h4 {
   font: bold 16px/45px "PT Sans", sans-serif;
 }
 body.culture-careers #maincontent #careers #careers-container #careers-content ul{
@@ -2729,21 +2739,19 @@ body.culture-careers #maincontent #careers #careers-container #careers-content u
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032141}}
 body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-download {
-  font: 16px/25px "PT Sans Narrow", sans-serif;
+  font: 16px/35px "PT Sans Narrow", sans-serif;
   color: #f58d3a;
   display: block;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032146}}
 body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-download:hover {
   text-decoration: underline;
-  padding-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032141}}
-body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-download {
-  font: bold 16px/25px "PT Sans Narrow", sans-serif;
-  color: #3c3c3c;
-  display: none;
-  margin-bottom: 40px;
+
+body.culture-careers #maincontent #careers #careers-container #careers-content .btn-career-expand {
+  /*height: 45px;*/
+  font: bold 16px/30px "PT Sans", sans-serif;
+  color: black;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -2753,6 +2761,15 @@ body.culture-careers #maincontent #careers #careers-container #careers-content d
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
+
+body.culture-careers #maincontent #careers #careers-container #careers-content .career-details{
+  display:none;
+}
+
+body.culture-careers #maincontent #careers #careers-container #careers-content .btn-career-expand:hover{
+  color: #f58d3a;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032146}}
 body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-download:hover {
   color: #f58d3a;
@@ -2761,9 +2778,9 @@ body.culture-careers #maincontent #careers #careers-container #careers-content d
 body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-apply {
   display: block;
   background: black;
-  width: 305px;
-  height: 46px;
-  font: bold italic 17px/46px "PT Sans", sans-serif;
+  width: 245px;
+  height: 36px;
+  font: bold italic 17px/34px "PT Sans", sans-serif;
   color: white;
   text-align: center;
   -webkit-transition-property: all;

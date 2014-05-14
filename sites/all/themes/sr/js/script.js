@@ -207,7 +207,7 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
     /*
      var count = $('#block-crumbs-breadcrumb ol li').length;
      $('#block-crumbs-breadcrumb ol li').each(function(i, v) {
-     var text = trimSpace($(this).text().replace(/›/gi, ''));
+     var text = trimSpace($(this).text().replace(/��/gi, ''));
      
      if (count == 1) {
      $('#header-left').after('<h2 id="page-title">' + text + '</h2>');
@@ -1119,8 +1119,21 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
         }
       }).trigger('hashchange');
 
+      $('.btn-career-expand').click(function(e) {
+        var $this = $(this);
+        e.preventDefault();
+        var $details = $this.parent().children('.career-details');
+        if($details.is(":visible"))
+          $this.text("Show the details +");
+        else
+          $this.text("Hide the details -");
+        
+        $details.slideToggle(500);
+
+      });
+
       // jobs scroll down
-      $('#careers-links a').click(function(e) {
+      /*$('#careers-links a').click(function(e) {
         var $this = $(this);
         e.preventDefault();
         var index = $this.parent().index();
@@ -1142,7 +1155,7 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 
         $('#careers-container').find('a').removeClass('current');
         $(this).addClass('current');
-      });
+      });*/
     }
     // end of Culture & careers page
 
@@ -1319,7 +1332,7 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 
       $('#tileview').trigger('click');
 
-      // if user clicks on ‘Clients’
+      // if user clicks on �lients��
       // please go back to all client listing without filtering
       var title = $('#page-title').text();
       $('#page-title').text('');
@@ -1456,21 +1469,21 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
         $('<a href="' + url + '" target="_blank" class="gmap-get-direction">Get directions</a>').appendTo($(".quicktabs-tabpage>.view-contact-map>.view-content").eq(i));
       });
     }
-	
-	// set the subscript project title of PH2O
-	if ($('body').hasClass('page-node-748')) {
-		$("#banner-text-top h3").html("PH<sub>2</sub>O");
-		$(".pics").children().attr("alt","PH₂O");
-		document.title = 'PH₂O | Sedgwick Richardson';
-	}
-	
-	if ($('body').hasClass('our-work') || $('body').hasClass('section-clients')) {
-		$(".isotope-element").each(function(){
-			if($(this).find("h3").text()=="PH2O"){
-				$(this).find("h3").html("PH<sub>2</sub>O");
-			}
-		});
-	}
+  
+  // set the subscript project title of PH2O
+  if ($('body').hasClass('page-node-748')) {
+    $("#banner-text-top h3").html("PH<sub>2</sub>O");
+    $(".pics").children().attr("alt","PH�");
+    document.title = 'PH� | Sedgwick Richardson';
+  }
+  
+  if ($('body').hasClass('our-work') || $('body').hasClass('section-clients')) {
+    $(".isotope-element").each(function(){
+      if($(this).find("h3").text()=="PH2O"){
+        $(this).find("h3").html("PH<sub>2</sub>O");
+      }
+    });
+  }
 
 
   });
