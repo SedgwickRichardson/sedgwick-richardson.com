@@ -607,7 +607,7 @@ function sr_block_view($delta = '') {
           }
 
           $temp .= "<div class='$class' id='jobs-$result->nid'><h4>$result->title ($result->field_cc_jobs_location_value)</h4>"
-                  . "<p class='career-date'>Posting date: " . date('d/m/y', $result->created) . "</p><p>$result->field_overview_value</p><div class='career-details'>$result->body_value</div><a class='btn-career-expand' href='#'>See the details +</a><a class='careers-download' target='_blank' href='"
+                  . "<p class='career-date'>Posting date: " . date('d/m/y', $result->created) . "</p><p>$result->field_overview_value</p><div class='career-details'>$result->body_value</div><a class='btn-career-expand' href='#'>Show the details +</a><a class='careers-download' target='_blank' href='"
                   . file_create_url(file_load($result->field_pdf_fid)->uri)
                   . "'>Download pdf</a><p>Please send us a short email convincing us why we should hire you along with your résumé and portfolio.</p>"
                   . "<a href='mailto:$email?subject=Application for $result->title Position' class='careers-apply'>Apply</a>"
