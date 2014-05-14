@@ -1120,7 +1120,7 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
       }).trigger('hashchange');
 
       // jobs scroll down
-      /*$('#careers-links a').click(function(e) {
+      $('#careers-links a').click(function(e) {
         var $this = $(this);
         e.preventDefault();
         var index = $this.parent().index();
@@ -1142,7 +1142,7 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 
         $('#careers-container').find('a').removeClass('current');
         $(this).addClass('current');
-      });*/
+      });
     }
     // end of Culture & careers page
 

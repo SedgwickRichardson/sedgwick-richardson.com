@@ -266,15 +266,6 @@ body.node-type-thought-leadership #maincontent #maincontent-wrap #maincontent-co
 body.culture-careers #maincontent #upper > div > div, body.culture-careers #maincontent #upper div  div{
 	display: none;
 }
-body.culture-careers #maincontent #careers #careers-container #careers-content h4{
-	font-size: 16px;
-	line-height: 20px;
-	font-weight: bold;
-}
-body.culture-careers #maincontent #careers #careers-container #careers-content .career-date{
-	padding-bottom: 20px;
-	font: 16px/20px "PT Sans Narrow", sans-serif;
-}
 body.news #content .view-news .view-content > div a, body.node-type-news #content .view-news .view-content > div a {
 	color: #3c3c3c;
 	-webkit-transition-property: color;

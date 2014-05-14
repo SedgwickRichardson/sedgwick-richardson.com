@@ -569,7 +569,7 @@ function sr_block_view($delta = '') {
       break;
 
     case 'culturecareers_careers':
-      $html = "<div id='careers-container'>";
+      $html = "<div id='careers-container'><ul>";
       $temp = "<div id='careers-content'>";
 
       $sql = "SELECT n.nid,
@@ -588,22 +588,28 @@ function sr_block_view($delta = '') {
               WHERE n.type = 'culture_career_jobs'
                 AND n.status = 1";
       foreach (db_query($sql) as $key => $result) {
-          if($key==sizeof($result)){
-            $class="last";
-          }
-          else{
-            $class="";
-          }
-          $temp .= "<div class='$class' id='jobs-$result->nid'><h4>$result->title ($result->field_cc_jobs_location_value)</h4>"
-                  . "<p class='career-date'>Posting date: " . date('d/m/y', $result->created) . "</p>"
-                  . "$result->body_value<a class='careers-download' target='_blank' href='"
+        if ($key == 0) {
+          $html .= "<li><a href='#jobs-$result->nid' class='current'>$result->title<br/>(" . $result->field_cc_jobs_location_value . ")
+                      <br/>
+                      <span>Posting date: " . date('d/m/y', $result->created) . "</span>
+                    </a></li>";
+          $temp .= "<div id='jobs-$result->nid' class='active'>$result->body_value<a class='careers-download' target='_blank' href='"
                   . file_create_url(file_load($result->field_pdf_fid)->uri)
-                  . "'>Download pdf for more detail</a>"
-                  . "<a href='mailto:infosg@sedgwick-richardson.com' class='careers-apply'>Contact us for more details</a>"
-                  . "</div>";
+                  . "'>Download pdf for more detail</a><a href='mailto:infosg@sedgwick-richardson.com' class='careers-apply'>Contact us for more details</a></div>";
+        } else {
+          $html .= "<li><a href='#jobs-$result->nid'>$result->title<br/>(" . $result->field_cc_jobs_location_value . ")
+                      <br/>
+                      <span>Posting date: " . date('d/m/y', $result->created) . "</span>      
+                    </a></li>";
+          $temp .= "<div id='jobs-$result->nid'>$result->body_value<a class='careers-download' target='_blank' href='"
+                  . file_create_url(file_load($result->field_pdf_fid)->uri)
+                  . "'>Download pdf for more detail</a><a href='mailto:infosg@sedgwick-richardson.com' class='careers-apply'>Contact us for more details</a></div>";
+        }
       }
-      $html .= $temp
-            ."</div>";
+      $temp .= "</div>";
+      $html .= "</ul>" . $temp;
+
+      $html .= "</div>";
       $block['content'] = $html;
       break;
   }
