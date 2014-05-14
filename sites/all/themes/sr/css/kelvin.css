@@ -2740,10 +2740,11 @@ body.culture-careers #maincontent #careers #careers-container #careers-content d
 body.culture-careers #maincontent #careers #careers-container #careers-content div a.careers-apply {
   display: block;
   background: black;
-  width: 305px;
-  height: 46px;
-  font: bold italic 17px/46px "PT Sans", sans-serif;
+  width: 245px;
+  height: 36px;
+  font: bold italic 17px/34px "PT Sans", sans-serif;
   color: white;
+  margin-top: 18px;
   text-align: center;
   -webkit-transition-property: all;
   -moz-transition-property: all;
