@@ -2783,6 +2783,7 @@ body.culture-careers #maincontent #careers #careers-container #careers-content d
   font: bold italic 17px/34px "PT Sans", sans-serif;
   color: white;
   text-align: center;
+  margin: 0 auto;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
