@@ -1422,6 +1422,9 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
           }, {
             src: '/sites/all/themes/sr/images/contact/bg-5.jpg',
             fade: 1000
+          }, {
+            src: '/sites/all/themes/sr/images/contact/bg-6.jpg',
+            fade: 1000
           }],
         loading: false,
         walk: function(step) {
@@ -1484,6 +1487,20 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
       }
     });
   }
+
+  //add award ribbon for the mainpage slider
+  if($('body').hasClass('front')){
+    $("h3:contains('Simplifying a complex business')").parents('.mc-image').append("<div class='award award_l'><a href='http://www.sedgwick-richardson.com/news/'>news</a></div>");
+    $("h3:contains('We Don't Compete on Being Boring')").parents('.mc-image').append("<div class='award award_l'><a href='http://www.sedgwick-richardson.com/news/'>news</a></div>");
+  }
+
+  //add award ribbon for the Li & Fung case study and ACG
+  if($('body').hasClass('page-node-883') || $('body').hasClass('page-node-873')){
+    $("#banner").append("<div class='award award_r'></div>");
+  }
+
+  //add the link of the footer menu for Yangon
+  //$('#footer-menu-2 .yangon-link').attr('href','/contact?qt-contact_tabs=4');
 
 
   });

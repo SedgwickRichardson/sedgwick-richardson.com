@@ -4,7 +4,8 @@ display: none;
 .page-news-archives #header #header-top-wrap #header-top #page-title{
 	display: none;
 }
-body.node-type-news #content .view-news .view-content .news-caption{
+body.node-type-news #content .view-news .view-content .news-caption,
+body.news #content .view-news .view-content .news-caption{
 	font-size: 14px;
 	font-style: italic;
 	color: #868686;
@@ -286,9 +287,48 @@ body.news #content .view-news .view-content > div a, body.node-type-news #conten
 	-o-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 }
+body.news #content .view-news .view-content > div p a, body.node-type-news #content .view-news .view-content > div p a {
+	color: #f58d3a;
+}
+body.news #content .view-news .view-content > div p a:hover, body.node-type-news #content .view-news .view-content > div p a:hover{
+	text-decoration: underline;
+}
 .view-thought-leadership #maincontent-container .nobottompadding{
 	padding-bottom: 0
 }
 .view-thought-leadership #maincontent-container strong{
 	font-weight: bold;
+}
+
+/*---------------------award ribbon css-------------------------*/
+.award{
+	width:192px;
+	height:82px;
+	position: absolute;
+	z-index: 100;
+}
+
+.award_l{
+	background: url(../images/ribbons_L.png);
+	left:0;
+}
+
+.award_r{
+	background: url(../images/ribbons_R.png);
+	right:0;
+}
+
+body.front .mc-image .award{
+	top: 100px;
+}
+
+.section-our-work .award{
+	top: 50px;
+}
+
+body.front .mc-image .award a{
+	text-indent: -9999px;
+	display: block;
+	width:192px;
+	height:82px;
 }

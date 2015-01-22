@@ -589,9 +589,13 @@ function sr_block_view($delta = '') {
               LEFT JOIN field_data_field_overview as o
                 ON o.entity_id = n.nid
               WHERE n.type = 'culture_career_jobs'
-                AND n.status = 1";
-      foreach (db_query($sql) as $key => $result) {
-          if($key==sizeof($result)){
+                AND n.status = 1
+              ORDER BY n.created DESC";
+      $results = db_query($sql);
+      $job_num = $results->rowCount();
+      //echo "<p>$job_num</p>";
+      foreach ($results as $key => $result) {
+          if($key==$job_num-1){
             $class="last";
           }
           else{
@@ -606,10 +610,17 @@ function sr_block_view($delta = '') {
               $email="infosg@sedgwick-richardson.com";
           }
 
-          $temp .= "<div class='$class' id='jobs-$result->nid'><h4>$result->title ($result->field_cc_jobs_location_value)</h4>"
+          if($result->field_overview_value==""){
+            $temp .= "<div class='$class' id='jobs-$result->nid'><h4>$result->title ($result->field_cc_jobs_location_value)</h4>"
+                  . "<p class='career-date'>Posting date: " . date('d/m/y', $result->created) . "</p><p>$result->body_value</p><a href='mailto:$email?subject=Application for $result->title Position' class='careers-apply'>Apply</a>"
+                  . "</div>";
+          }
+          else{
+            $temp .= "<div class='$class' id='jobs-$result->nid'><h4>$result->title ($result->field_cc_jobs_location_value)</h4>"
                   . "<p class='career-date'>Posting date: " . date('d/m/y', $result->created) . "</p><p>$result->field_overview_value</p><div class='career-details'>$result->body_value<p>Please send us a short email convincing us why we should hire you along with your résumé and portfolio.</p>"
                   . "<a href='mailto:$email?subject=Application for $result->title Position' class='careers-apply'>Apply</a></div><a class='btn-career-expand' href='#'>Show the details +</a>"
                   . "</div>";
+          }
       }
       $html .= $temp
             ."</div>";

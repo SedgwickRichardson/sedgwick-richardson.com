@@ -217,7 +217,7 @@ if ($_SERVER['SERVER_NAME'] == "staging.sedgwick-richardson.hk") {
       'default' => 
       array (
         'database' => 'sr_staging',
-        'username' => 'michiel',
+        'username' => 'root',
         'password' => 'sedgw1ck',
         'host' => 'localhost',
         'port' => '',
@@ -244,7 +244,7 @@ else if ($_SERVER['SERVER_NAME'] == "local.sedgwick-richardson.com") {
     ),
   );
 }
-else if ($_SERVER['SERVER_NAME'] == "sedgwick-richardson.com" || $_SERVER['SERVER_NAME'] == "www.sedgwick-richardson.com") {
+else if ($_SERVER['SERVER_NAME'] == "sedgwick-richardson.com" || $_SERVER['SERVER_NAME'] == "www.sedgwick-richardson.com" || $_SERVER['SERVER_NAME'] == "106.187.36.65") {
     $databases = array (
     'default' => 
     array (

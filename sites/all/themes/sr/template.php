@@ -352,6 +352,11 @@ function sr_menu_link($vars) {
       $quicktab_index = 3;
       break;
 
+    case 'Yangon':
+      $is_quicktab_link = true;
+      $quicktab_index = 5;
+      break;
+
     case 'Branding':
       $is_isotope_link = true;
       $isotope_filter = 'branding';

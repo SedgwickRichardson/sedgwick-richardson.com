@@ -1373,6 +1373,9 @@ body.node-type-our-work #maincontent #maincontent-wrap #o-r #overview p, body.no
   color: #3c3c3c;
   margin-bottom: 1em;
 }
+body.node-type-our-work #maincontent #maincontent-wrap #o-r #overview p strong, body.node-type-our-work #maincontent #maincontent-wrap #o-r #results p strong{
+  font-weight: bold;
+}
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031118}}
 body.node-type-our-work #maincontent #maincontent-wrap #o-r #results {
   float: right;
@@ -3221,8 +3224,10 @@ body.clients #loadmore:hover {
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032507}}
 body.news #footer, body.node-type-news #footer {
-  position: fixed;
-  bottom: 0;
+  /*position: fixed;
+  bottom: 0;*/
+  position: static;
+  bottom: auto;
   z-index: 40;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032511}}
@@ -3338,7 +3343,7 @@ body.news #content .view-news, body.node-type-news #content .view-news {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032529}}
 body.news #content .view-news .view-content, body.node-type-news #content .view-news .view-content {
-  padding-bottom: 75px;
+  padding-bottom: 35px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032531}}
 body.news #content .view-news .view-content > div, body.node-type-news #content .view-news .view-content > div {
@@ -3386,7 +3391,8 @@ body.news #content .view-news .pager, body.node-type-news #content .view-news .p
   overflow: hidden;
   background: url("../images/pager-line.png") repeat-x left top;
   position: relative;
-  padding-bottom: 90px;
+  /*padding-bottom: 90px;*/
+  padding-bottom: 40px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032570}}
 body.news #content .view-news .pager li, body.node-type-news #content .view-news .pager li {
@@ -3564,7 +3570,7 @@ body.section-contact #footer {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032711}}
 body.section-contact #block-quicktabs-contact-tabs {
-  width: 850px;
+  width: 852px;
   height: 550px;
   background: white;
   margin: 0 auto;
@@ -3592,7 +3598,7 @@ body.section-contact #block-quicktabs-contact-tabs .quicktabs-tabs li a {
   border-left: 1px solid #414141;
   display: block;
   background: #222222;
-  width: 170px;
+  width: 142px;
   height: 59px;
   font: bold 14px/59px "PT Sans Narrow", sans-serif;
   color: white;
@@ -3619,7 +3625,7 @@ body.section-contact #block-quicktabs-contact-tabs #loadmore {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032752}}
 body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-header {
-  padding: 29px 0 27px;
+  padding: 20px 0;/*29px 0 27px;*/
   text-align: center;
   color: #3c3c3c;
 }
@@ -3646,32 +3652,31 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-cont
   padding-top: 10px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032775}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info,
-body.section-contact #block-quicktabs-contact-tabs .view-contact-map
-{
+body.section-contact #block-quicktabs-contact-tabs{
   line-height: 20px;
 }
 body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div {
   float: left;
-  padding: 20px 0 24px;
+  padding: 20px 20px 24px 0;
+  width: 250px;
+  height: 200px;
+  /*padding: 20px 0 24px;
   width: 387px;
-  height: 190px;
+  height: 190px;*/
   overflow: hidden;
   position: relative;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032783}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div .address-info {
+body.section-contact #block-quicktabs-contact-tabs .view-content .address-info {
   margin-bottom: 15px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032786}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div h3,
-body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-content > div h3 {
+body.section-contact #block-quicktabs-contact-tabs .view-content div h3 {
   font: bold italic 20px/20px "PT Serif", serif;
   padding-bottom: 16px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032790}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a,
-body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment .view-content a {
+body.section-contact #block-quicktabs-contact-tabs .view-content div a{
   color: #3c3c3c;
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -3683,30 +3688,26 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment
   transition-duration: 0.5s;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032792}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a:hover,
-body.section-contact #block-quicktabs-contact-tabs .view-contact-map .attachment .view-content a:hover
-{
+body.section-contact #block-quicktabs-contact-tabs .view-content div a:hover{
   color: #f58d3a;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032796}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div .hidden {
+body.section-contact #block-quicktabs-contact-tabs .view-content div .hidden {
   display: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032799}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a.email,
-body.section-contact #block-quicktabs-contact-tabs .view-contact-map .view-content a.email
-{
+body.section-contact #block-quicktabs-contact-tabs .view-content div a.email{
   display: block;
   padding-top: 10px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032803}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div a.get-direction-link {
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content div a.get-direction-link {
   display: inline-block;
   padding-right: 37px;
   font-weight: bold;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032808}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div span {
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content div span {
   display: none;
   font-weight: bold;
   font-style: italic;
@@ -3714,15 +3715,15 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-cont
   text-decoration: underline;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032815}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div.even {
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content div.even {
   padding-left: 19px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032817}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div.even a.get-direction-link {
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content div.even a.get-direction-link {
   left: 19px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032820}}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div.even span {
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content div.even span {
   left: 139px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032828}}
@@ -4052,4 +4053,37 @@ html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.h
 html.touch #header #header-top-wrap #header-top #header-left #triangle-hotspot.hover > #header-left-pulldown li a {
   height: 36px;
   overflow: visible;
+}
+
+#quicktabs-tabpage-contact_tabs-5 .view-content{
+  width: 486px;
+  margin: 107px auto 0;
+}
+#quicktabs-tabpage-contact_tabs-5 .contact-left{
+  float: left;
+  width: 220px;
+}
+#quicktabs-tabpage-contact_tabs-5 .contact-right{
+  float: right;
+  width: 245px;
+}
+body.section-contact #block-quicktabs-contact-tabs .view-content div span.contact-label,
+body.section-contact #block-quicktabs-contact-tabs .view-content div span.contact-info{
+  color: #3c3c3c;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  display: block;
+}
+
+body.section-contact #block-quicktabs-contact-tabs .view-content div span.contact-label {
+  float: left;
+}
+
+body.section-contact #block-quicktabs-contact-tabs .view-content div span.contact-info {
+  margin-left: 50px;
+}
+
+body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content div.last .get-direction-link{
+  display: none;
 }
