@@ -2691,6 +2691,12 @@ body.culture-careers #maincontent #careers #careers-container #careers-content {
   width: 740px;*/
   position: relative;
 }
+body.culture-careers #maincontent #careers #careers-container #careers-content p a{
+  color: #f58d3a;
+}
+body.culture-careers #maincontent #careers #careers-container #careers-content p a:hover{
+  text-decoration: underline;
+}
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032128}}
 body.culture-careers #maincontent #careers #careers-container #careers-content>div {
   padding-bottom: 27px;
@@ -2711,7 +2717,6 @@ body.culture-careers #maincontent #careers #careers-container #careers-content d
 body.culture-careers #maincontent #careers #careers-container #careers-content{
   font: normal 16px/25px "PT Sans", sans-serif;
   color: #3c3c3c;
-<<<<<<< HEAD
 }
 body.culture-careers #maincontent #careers #careers-container #careers-content #overview div{
   padding-bottom: 27px;

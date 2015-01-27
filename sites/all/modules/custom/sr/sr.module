@@ -604,7 +604,7 @@ function sr_block_view($delta = '') {
 
           $location = $result->field_cc_jobs_location_value;
           if($location=="Hong Kong"){
-              $email="infohk@sedgwick-richardson.com";
+              $email="recruit@sedgwick-richardson.com";
             }
           else if($location=="Singapore"){
               $email="infosg@sedgwick-richardson.com";
@@ -617,7 +617,7 @@ function sr_block_view($delta = '') {
           }
           else{
             $temp .= "<div class='$class' id='jobs-$result->nid'><h4>$result->title ($result->field_cc_jobs_location_value)</h4>"
-                  . "<p class='career-date'>Posting date: " . date('d/m/y', $result->created) . "</p><p>$result->field_overview_value</p><div class='career-details'>$result->body_value<p>Please send us a short email convincing us why we should hire you along with your résumé and portfolio.</p>"
+                  . "<p class='career-date'>Posting date: " . date('d/m/y', $result->created) . "</p><p>$result->field_overview_value</p><div class='career-details'>$result->body_value"
                   . "<a href='mailto:$email?subject=Application for $result->title Position' class='careers-apply'>Apply</a></div><a class='btn-career-expand' href='#'>Show the details +</a>"
                   . "</div>";
           }

@@ -99,7 +99,7 @@
     <article>
       <p><span>Inspiring</span> Asian brands to become highly respected internationally, and international brands to succeed in Asia is what we pride ourselves on.</p>
       
-      <p><span>Brand</span> differentiation is core to this. From Hong Kong to London, Singapore to Shanghai, clients come to us to establish and sustain relationships of worth, designing their future, communicating their story, and building belief to instill the confidence to act. </p>
+      <p><span>Brand</span> differentiation is core to this. In Hong Kong, London, Shanghai, Singapore and Yangon, clients come to us to establish and sustain relationships of worth, designing their future, communicating their story, and building belief to instill the confidence to act. </p>
       
       <p>Through corporate branding, corporate reporting and digital communications, our focus remains on one thing: <span>Performance.</span></p>
       <h4><span>Inspiring Brand Performance<sup>TM</sup></span> to build brand value.</h4>
