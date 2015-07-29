@@ -181,7 +181,7 @@ if ($is_front) {
       <div id="footer-bottom">
         <div id="copyright">
           <h3>Inspiring brand performance™</h3>
-          <h4>© 2014 Sedgwick Richardson</h4>
+          <h4>© 2015 Sedgwick Richardson</h4>
         </div>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="footer-logo"><div></div></a>
       </div>

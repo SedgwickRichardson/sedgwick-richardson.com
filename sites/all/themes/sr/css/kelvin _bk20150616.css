@@ -1825,20 +1825,6 @@ body.our-people #outmanagement > div article .right a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-
-body.our-people #outmanagement > div article .right p a {
-  color: #f58d3a;
-  font-weight: normal;
-  -webkit-transition-property: none;
-  -moz-transition-property: none;
-  -o-transition-property: none;
-  transition-property: none;
-}
-
-body.our-people #outmanagement > div article .right p a:hover{
-  text-decoration: underline;
-}
-
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000031474}}
 body.our-people #outmanagement > div article .right a:hover {
   color: #f58d3a;
@@ -3592,11 +3578,11 @@ body.section-contact #footer {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032711}}
 body.section-contact #block-quicktabs-contact-tabs {
   width: 852px;
-  height: 580px;
+  height: 550px;
   background: white;
   margin: 0 auto;
   z-index: 5;
-  top: 120px;
+  top: 150px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032718}}
 body.section-contact #block-quicktabs-contact-tabs .quicktabs-tabs {
@@ -3686,9 +3672,6 @@ body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-cont
   height: 190px;*/
   overflow: hidden;
   position: relative;
-}
-body.section-contact #block-quicktabs-contact-tabs .view-contact-info .view-content > div.third{
-    height: 235px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/wamp\/www\/sr_staging\/sites\/all\/themes\/sr\/sass\/kelvin\.scss}line{font-family:\000032783}}
 body.section-contact #block-quicktabs-contact-tabs .view-content .address-info {

@@ -102,7 +102,7 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 
     var contentH;
     contentH = mainH + footerH;
-    console.log(winH+" "+mainH+" "+footerH+" "+contentH);
+    //console.log(winH+" "+mainH+" "+footerH+" "+contentH);
 
     if (winH > contentH) {
       /*if(isChrome){
@@ -169,6 +169,22 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
     $(window).resize(function() {
       winH = $(window).height();
     }).resize();
+
+    // ========== start of Init GA event tracking ==========
+    //open header social share popup
+    $('#social-trigger').click(function(){
+      if(!$(this).hasClass('active')){
+        //console.log('share-menu');
+        ga('send', 'event', 'social', 'share', 'share-menu');
+      }
+    });
+
+    //search form submit
+    $('#views-exposed-form-search-page-page,#edit-submit-search-page').submit(function( event ) {
+      //console.log('search');
+      ga('send', 'event', 'search', 'click', 'search');
+    });
+    // ========== end of Init GA event tracking ==========
 
 
     // ========== header ==========
@@ -565,6 +581,10 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
           if (!$ac.hasClass('selected')) {
             $ac.addClass('selected');
             $ul.css({'height': h});
+            //GA event tracking
+            //console.log('services-'+$(this).text().replace(/ /gi,"").toLowerCase());
+            ga('send', 'event', 'services', 'expand', 'services-'+$(this).text().replace(/ /gi,"").toLowerCase());
+
           } else {
             $ac.removeClass('selected');
             $ul.css({'height': 0});
@@ -576,6 +596,19 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 
 
     // ========== end of other snippet ==========
+
+    //GA event tracking
+    $('#footer-menu-1 a').click(function(){
+        tag = 'footer-'+$(this).text().replace(/ /gi,"").toLowerCase();
+        //console.log(tag);
+        ga('send', 'event', 'services', 'click', tag);
+    });
+
+    $('#footer-menu-2 a').click(function(){
+        tag = 'footer-'+$(this).text().replace(/ /gi,"").toLowerCase();
+        //console.log(tag);
+        ga('send', 'event', 'studios', 'click', tag);
+    });
 
     // end of global style
 
@@ -708,6 +741,7 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
         var href = $(this).attr('href').replace(/^#/, '');
         var option = $.deparam(href, true);
 
+
         // save loaded group to array
         // initialed with 1
         // for the loadmore use
@@ -800,9 +834,14 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
         var parent = $('#deliverable a[href="#filter=.' + currentFilter + '"]').parent().index('#deliverable div');
         $('#expertise a').eq(parent).trigger('click');
         $('#deliverable a[href="#filter=.' + currentFilter + '"]').trigger('click');
+
+        //GA event tracking for filtering
+        //console.log('work-'+currentFilter);
+        ga('send', 'event', 'work', 'filter', 'work-'+currentFilter);
       })
-              // trigger hashchange to capture any hash data on init
-              .trigger('hashchange');
+      
+      // trigger hashchange to capture any hash data on init
+      .trigger('hashchange');
 
 
       // click loadmore to save loaded group
@@ -812,6 +851,10 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 
         loadedGroups[currentFilter]['current']++;
         $(window).trigger('hashchange');
+
+        //GA event tracking for loadmore button
+        //console.log('work-loadmore');
+        ga('send', 'event', 'work', 'click', 'work-loadmore');
 
         return false;
       });
@@ -1009,6 +1052,13 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
      * =======================================================================
      */
     if ($('body').hasClass('culture-careers')) {
+
+      //GA event tracking
+      $('.careers-apply').click(function(){
+        //console.log('careers-apply');
+        ga('send', 'event', 'careers', 'enquiry', 'apply-careers');
+      });
+
       // This resize demo only works properly with MovingBoxes v2.2.3+
       //
       var timer;
@@ -1278,10 +1328,13 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 
 
         $('#filter a[href="#filter=.' + currentFilter + '"]').trigger('click');
+
+        //GA event tracking
+        //console.log('clients-'+currentFilter);
+        ga('send', 'event', 'clients', 'filter', 'clients-'+currentFilter);
       })
               // trigger hashchange to capture any hash data on init
               .trigger('hashchange');
-
 
       // click loadmore to save loaded group
       // and trigger the hashchange
@@ -1448,6 +1501,10 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
       $('.quicktabs-tabs a').each(function(i, v) {
         $(this).click(function() {
           $.vegas('jump', i);
+          //GA event tracking
+          tag = 'contacts-'+$(this).text().replace(/ /gi,"").toLowerCase();
+          console.log('clicked quicktabs '+tag);
+          ga('send', 'event', 'studios', 'enquiry', tag);
         });
       });
 
@@ -1457,7 +1514,7 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
         if (newAddr.indexOf('+') == 0) {
           newAddr = newAddr.slice(1);
         }
-        ;
+
         if (newAddr.lastIndexOf('+') == newAddr.length - 1) {
           newAddr = newAddr.slice(0, newAddr.length - 1);
         }
@@ -1470,6 +1527,29 @@ var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 
         // gmap get direction button
         $('<a href="' + url + '" target="_blank" class="gmap-get-direction">Get directions</a>').appendTo($(".quicktabs-tabpage>.view-contact-map>.view-content").eq(i));
+      });
+
+      //GA event tracking
+      $('.gmap-get-direction').each(function(i, v) {
+        tag2 = 'contacts-'+$(".quicktabs-tabs li").eq(i + 1).find('a').text().replace(/ /gi,"").toLowerCase()+'directions';
+        $(this).click(function(){
+            //console.log('clicked direction '+tag2);
+            ga('send', 'event', 'studios', 'enquiry', tag2);
+        });
+         
+      });
+
+      $('.email').click(function(){
+        //GA event tracking
+        var tag;
+        if($(this).siblings('h3').size()==0){
+          tag = 'contacts-'+$(this).parent().siblings('h3').text().replace(/ /gi,"").toLowerCase()+'email';
+        }
+        else{
+          tag = 'contacts-'+$(this).siblings('h3').text().replace(/ /gi,"").toLowerCase()+'email'
+        }
+        //console.log(tag);
+        ga('send', 'event', 'studios', 'enquiry', tag);
       });
     }
   
